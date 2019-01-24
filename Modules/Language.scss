@@ -1,0 +1,202 @@
+@media screen and (min-width: $breakpointXSM){ 
+    .mod-lang {
+        position: relative;
+        .dropdown{
+            > span{
+                &:empty{display: none;}
+                cursor: pointer;
+                background: none;
+                border: none;
+                font-family: $medium;
+                font-size: 14px;
+                color: $lDark;
+                padding:13px 15px;
+                line-height: 1;
+                height: inherit;
+                display: inline-block;
+                @include transition(all .2s ease);
+                > a, > i{
+                    display: inline-block;
+                    vertical-align: middle;
+                }
+                i{margin-left: 10px; margin-top: 3px;}
+                i, i:before{
+                    font-size: 8px;
+                }
+                > a{
+                    > span{
+                        > img{ 
+                            margin-right:5px; 
+                            border-radius: 100%; 
+                            overflow: hidden; 
+                            width: 14px; 
+                            height: 14px; 
+                        }
+                        > img,
+                        > span{
+                            display: inline-block;
+                            vertical-align: middle;
+                            font-family: $light;
+                        }
+                    }                
+                }
+            }
+            &.opened{
+                > span{
+                    background: #fff;
+                }
+                .sub{
+                    opacity: 1;
+                    visibility: visible;
+                }
+            }
+        }
+        .sub{
+            display: block;
+            position: absolute;
+            top: 40px;
+            left: 0;
+            right: 0;
+            margin-left: auto;
+            margin-right: auto;
+            z-index: 1;
+            background: #fff;
+            padding:15px;
+            border-top: 1px solid $border;
+            width: auto;
+            opacity: 0;
+            visibility: hidden;
+            @include transition(all .2s ease);
+            li{
+                margin-top: 5px;
+                &:first-child{margin-top: 0;}
+                a{
+                    display:block;
+                    padding:8px 0;
+                    > span{
+                        display: block;
+                        img{
+                            display: inline-block;
+                            vertical-align: middle;
+                            margin-right: 10px;
+                            border-radius: 100%; 
+                            overflow: hidden; 
+                            width: 14px; 
+                            height: 14px; 
+                        }
+                        span{
+                            display: inline-block;
+                            vertical-align: middle;
+                            font-family:$regular;
+                            font-size: 14px;
+                        }
+                    }
+                }
+            }
+        }    
+    }
+}
+
+.mod-lang {
+    &-header, &-footer{
+        display: none;
+    }
+}
+
+.vailLang{z-index: 5; transition: none;}
+
+@media only screen and (min-width: 850px) and ( max-width: 1200px) {
+    .mod-lang .dropdown > span{padding-left: 10px; padding-right: 10px;}
+    .mod-lang .dropdown > span > a > span > img{display: none;}
+}
+
+@media screen and (max-width: $breakpointXSM){
+    .mod-lang{
+        .dropdown {
+            > span{
+                &:empty{display: none;}
+                background: none;
+                border:none;
+                height: inherit;
+                line-height: inherit;
+                padding: 10px;
+                border-left: 1px solid rgba(230, 231, 233, .2);
+                a {
+                    span{
+                        img{display: none;}
+                        color: #fff;
+                    }
+                }
+                i{
+                    display: inline-block;
+                    vertical-align: middle;
+                    margin-left: 10px;
+                }
+                i, i:before{
+                    font-size: 11px;
+                    color: #fff;
+                }
+            }
+            &.opened{
+                .sub{display: block;}
+            }
+        }
+        .sub{
+            position: absolute;
+            top: 50px;
+            left: 0;
+            z-index: 2;
+            background: #fff;
+            padding:10px 20px;
+            border-top: 1px solid $border;
+            width: 100%;
+            li{
+                border-top:1px solid $border;
+                &:first-child{border-top: none;} 
+                a{
+                    padding: 15px 20px 15px 40px;
+                    display:block;
+                    font-family:$regular;
+                    font-size: 14px;
+                    text-align: left;
+                    position: relative;
+                    span{
+                        span, img{display: inline-block; vertical-align: middle;}
+                        img{margin-right: 10px;}
+                    }
+                    &:before{
+                        content: '';
+                        width: 18px;
+                        height: 18px;
+                        border: 1px solid #e6e7e9;
+                        border-radius: 100%;
+                        background: #fff;
+                        position: absolute;
+                        left: 0;
+                        top: 50%;
+                        margin-top: -10px;
+                    }
+                }
+                &.selected{
+                    a{
+                        &:after{
+                            content: '';
+                            width: 10px;
+                            height: 10px;
+                            border-radius: 100%;
+                            background: #1edeac;
+                            position: absolute;
+                            left: 5px;
+                            top: 50%;
+                            margin-top: -5px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .mobile-lang-popup{
+        .vailLang {opacity: .7; visibility: visible;}
+    }
+}

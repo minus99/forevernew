@@ -1,0 +1,300 @@
+.ems-page {
+    &-member{
+        .ems-grid-message{
+            .ems-grid-row{
+                background: #fff;
+                margin-bottom: 10px;
+                padding: 15px 25px;
+                border: 1px solid $border;
+                > div{
+                    text-align: center;
+                    padding: 0 5px;
+                    font-family: $regular;
+                    font-size: 14px;
+                }
+                .col-1{width:20px; padding-left: 0; padding-right: 0;}
+                .col-2{width:15%;}
+                .col-3{width:60%;}
+                .col-4{width:15%;}
+                .col-4 a{/*text-decoration: underline;*/}
+                &.newMessage{
+                    > div{
+                        font-family: $regular;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.ems-page-default{
+    &-message{
+        div[id$="plhMesajYokLabel1"]{
+            background: none;
+            padding: 0;
+            color: $lDark;
+            line-height: inherit;
+        }
+    }
+    &-message-detail{
+        .ems-message-type, .msgDtHeader, .msgDtContent{
+            li{
+                display: table;
+                width: 100%;
+                table-layout: fixed;
+                text-align: center;
+                > span{
+                    display: table-cell;
+                    vertical-align: middle;
+                    border: 1px solid #ddd;
+                    padding: 10px;
+                    &:first-child{
+                        border-right: 0;
+                    }
+                }
+                &:first-child{
+                    > span{border-bottom: 0; font-size: 16px; font-family:$bold; color: #231f20;}
+                }
+            }
+        }
+        .msgDtList{
+            margin-bottom: 30px;
+            &:before, &:after{
+                content:'';
+                font-size: 0;
+                width: 100%;
+                height: 0;
+                clear: both;
+                height: 0;
+                overflow: hidden;
+            }
+            .msgDtHeader, .msgDtContent{
+                ul{
+                    display: table;
+                    width: 100%;
+                    table-layout: fixed;
+                    text-align: center;
+                    li{
+                        text-align: center;
+                        display: table-cell;
+                        vertical-align: middle;
+                        border: 1px solid #ddd;
+                        &:first-child{border-right:0;}
+                        > span{
+                            border:none;
+                            display: block;
+                            &:first-child{
+                                font-size: 14px;
+                                font-family: $regular;
+                            }
+                        }
+                    }
+                }
+            }
+            .msgDtHeader{
+                ul{
+                    li{
+                        border-bottom: 0;
+                        > span:first-child{font-size: 16px; font-family:$medium;}
+                    }
+                }
+            }
+        }
+        .msgDtListBtn{
+            @include flex();
+            @include flexDirection(row);
+            justify-content: space-between;
+            align-items: center;
+            .btnMesajKonuYeniGonder, .btnMesajCozuldu{
+                max-width: 49%;
+                background: $lDark;
+                @media screen and (min-width: $breakpointXSM){
+                    &:hover{
+                        background: $btnColor;
+                    }
+                }
+            }
+        }
+        .ems-message-detail-form{
+            .ems-form-inner {
+                margin-top: 50px;
+                .ems-field{
+                    &.success-hide{
+                        display: none;
+                    }
+                    &.frmLeft, &.frmRight {
+                        display: inline-block;
+                        vertical-align: top;
+                        width: 50%;
+                    }
+                    &.frmLeft{padding-right: 10px;}
+                    &.frmRight{padding-left: 10px;}
+                    &:nth-child(1),
+                    &:nth-child(2),
+                    &:nth-child(4),
+                    &:nth-child(5){display: none !important;}
+                    textarea{
+                        width: 100% !important;
+                        height: 100px;
+                        resize: none;
+                    }
+                    &.msgCaptcha{
+                        span[id$="lbfUYE_KONTROLKODU"]{
+                            display: block;
+                            margin-top: 15px;
+                        }
+                        img{margin-top: 20px;}
+                        input{
+                            max-width: 200px;
+                        }
+                    }
+                    .geneltelefon{width: 100% !important;}
+                    .btnMesajGonder{
+                        max-width: 240px;
+                        margin-top: 30px;
+                    }
+                }
+            }
+        }
+
+        .tableTitleMesajGonder{
+            span{
+                font-size: 15px;
+                font-family: $medium;
+                padding: 30px 0;
+                display: block;
+            }
+        }
+        .tableMesajGonder_aciklama{
+            padding-bottom: 30px;
+        }
+
+        .mesajGonder{
+            .tableMesajMetin{
+                > tbody{
+                    > tr{
+                        > th{
+                            display: block;
+                            width: 100%; 
+                            padding-bottom: 10px;
+                        }
+                        > td{
+                            display: block;
+                            width: 100%; 
+                        }
+                    }
+                }
+            }
+            .pageMesajGonder_CaptchaImage1{
+                max-width: 250px;
+                > div{
+                    img, input{ margin-bottom: 10px;}
+                    > span{display: block;}
+                }
+            }
+            .pageMesajGonder_btnMesajGonder{
+                table{
+                    display: table !important;
+                    text-align: left;
+                    a.btnDefault {
+                        max-width: 250px;
+                        margin-top: 10px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: $breakpointXSM){
+    .ems-page {
+        &-member{
+            .ems-grid-message{
+                @include flex();
+                flex-wrap: wrap;
+                .ems-grid-header, .ems-grid-row{
+                    @include flex();
+                    @include flexDirection(column);
+                    justify-content: space-around;
+                    padding: 0;
+                    margin-bottom: 30px;
+                    > div{
+                        width: 100%;
+                        padding:15px 10px;
+                        min-height: 30px;
+                        line-height: 1;
+                        border-top: 1px solid $border;
+                        flex: inherit;
+                        max-width: inherit;
+                        &:first-child{border-top: none;}
+                    }
+                }
+                .ems-grid-header{
+                    border-width:1px 0 1px 1px;
+                    border-style: solid;
+                    border-color: $border; 
+                    &:first-child{
+                        @include flex();
+                    }
+                    width: 40%;
+                    flex-basis: 40%;
+                    flex-grow: 1;
+                    > div{
+                        text-align: left;
+                    }
+                }
+                .ems-grid-row{
+                    width: 60%;
+                    flex-basis: 60%;
+                    flex-grow: 2;
+                    table-layout: inherit;
+                    position: relative;
+                    .col-1{
+                        margin-left: auto;
+                        margin-right: auto;
+                    }
+                    .col-3 a{
+                        font-size: 13px;
+                        display: block;
+                        max-height: 12px;
+                        overflow: hidden;
+                        &.lnkPopupMesajOku {display: none;}
+                    }
+
+                    .col-2, .col-3, .col-4{width:100%;}
+                }
+            }
+
+            .ems-page-default{
+                &-message{
+                    padding:20px;
+                }
+                &-message-detail{
+                    .ems-page-default-info{
+                        padding: 0;
+                    }
+                    .btnMesajKonuYeniGonder{margin-right:0;}
+                    .btnMesajKonuYeniGonder, .btnMesajCozuldu{
+                        max-width: 100%;
+                    }
+                    .msgDtListBtn{
+                        @include flexDirection(column);
+                    }
+                    .btnMesajCozuldu{margin-top: 20px;}
+                    .mesajGonder{
+                        .pageMesajGonder_CaptchaImage1{max-width: 100%;}
+                        .pageMesajGonder_btnMesajGonder{
+                            table{
+                                a.btnDefault {
+                                    max-width: 100%;
+                                    padding-top: 20px;
+                                    padding-bottom: 20px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

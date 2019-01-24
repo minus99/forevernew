@@ -1,0 +1,144 @@
+.ems-page {
+    &-member{
+        .ems-grid-default {
+            .ems-grid-header {
+                display: none;
+            }
+            .ems-grid-row {
+                padding: 30px 0;
+                display: table;
+                table-layout: fixed;
+                width: 100%;
+                > div {
+                    display: table-cell;
+                    vertical-align: middle;
+                }
+                .ems-grid-img {
+                    width: 80px;
+                    text-align: center;
+                    a[id$="imageHref"]{display: none;}
+                    a {
+                        display: inline-block;
+                        img{width: 80px;}
+                    }
+                }
+                .ems-grid-name {
+                    padding: 0 20px;
+                    width: 45%;
+                    span {
+                        font-size: 13px;
+                        font-family: $regular;
+                    }
+                    a {
+                        span {
+                            &.prdItem {
+                                font-family: $bold;
+                                font-size: 15px;
+                            }
+                        }
+                    }
+                }
+                .ems-grid-code {
+                    a {
+                        font-family: $regular;
+                        display: block;
+                    }
+                }
+                .ems-grid-piece {
+                    width: 25%;
+                    text-align: center;
+                    border-top: none;
+                    border-bottom: none;
+                    border-left: 1px solid $nDark;
+                    border-right: 1px solid $nDark;
+                    input {
+                        width: 100% !important;
+                        text-align: center;
+                        position: relative;
+                        height: 25px;
+                        line-height: 10px;
+                        color: $nDark;
+                        border: none;
+                        padding-left: 50%;
+                    }
+                    a {
+                        border: 1px solid $inputborder;
+                        display: inline-block;
+                        padding: 7px;
+                        color: $inputborder;
+                        height: 30px;
+                        &:hover {
+                            background: $fdYellow;
+                            color: $lDark;
+                            border: 1px solid $fdYellow;
+                        }
+                    }
+                }
+                .ems-grid-price-total {
+                    width: 20%;
+                    text-align:center;
+                    font {
+                        text-align: center;
+                        &.brutFiyat {
+                            text-decoration: line-through;
+                        }
+                    }
+                }
+                .ems-price{
+                    color: #221e1f;
+                }
+                .ems-grid-delete {
+                    width: 10%;
+                    text-align: right;
+                    padding-right: 10px;
+                }
+                .kdvDahil{display: none;}
+            }
+        }
+        
+        a.btnTakipListeStokTumSil, a.btnFavoriListeTumSil{
+            padding: 10px 20px;
+            margin: 20px 0 0 0;
+            width: auto;
+            display: none;
+            span {
+                letter-spacing: 0;
+                font-size: 13px;
+                color: $darkBlack;
+            }
+            &:hover {
+                background: $lDark;
+                span {
+                    color: #fff;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: $breakpointXSM){
+    .ems-page {
+        &-member{
+            .ems-grid-default {
+                .ems-grid-row {
+                    position: relative;
+                    .ems-grid-img {                  
+                        img {
+                            
+                        }
+                    }
+                    .ems-name, .ems-price{
+                        font-size: 14px;
+                        font-family: $regular;
+                    }
+                    > div {
+                        flex: inherit;
+                        max-width: inherit;
+                        display: inline-block;
+                        vertical-align: top;
+                    }
+                }
+            }
+        }
+    }
+}

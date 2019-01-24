@@ -1,0 +1,605 @@
+.kutuOzellikFiltre{
+    .kutuHeaderDefault,
+    .urunKiyaslamaOzellik_temizle,
+    .ayiracDefault,
+    .urunKiyaslamaOzellik_btnArama { display: none; }
+}
+
+.kutuOzellikFiltre .kutuBodyOzellikFiltre > table {
+    > tbody > tr > {
+        td .urunKiyaslamaOzellik_ozellik {
+            a img{display: none;}
+        }
+    }
+}
+
+    .kutuOzellikFiltre{
+        .kutuBodyOzellikFiltre{
+            > table{
+                > tbody{
+                    > tr{
+                        border-bottom: 1px solid #C7C8CA;
+                        > td{
+                            &:empty{display:none;}
+                            > .urunKiyaslamaOzellik_ozellik{
+                                padding: 0 12px;
+                            }
+                            .urunKiyaslamaOzellik_ozellik{   
+                                .urunKiyaslamaOzellik_ozellikAd{
+                                    font-family: $medium;
+                                    font-size: 16px;
+                                    padding: 23px 0;
+                                    position: relative;
+                                    cursor: pointer;
+                                    &:after{
+                                        content: "";
+                                        position: absolute;
+                                        right: 0;
+                                        top: 50%;
+                                        width: 10px;
+                                        height: 2px;
+                                        top: 30px;
+                                        background: #C7C8CA;
+                                    }
+                                    &:before{
+                                        content: '';
+                                        position: absolute;
+                                        right: 4px;
+                                        top: 26px;
+                                        width: 2px;
+                                        height: 10px;
+                                        background: #C7C8CA;
+                                        display: none;
+                                    }
+                                    .mobile-element-filter-span-select{
+                                        &:empty{display: none; }
+                                    }
+                                }
+                                &.kapali{
+                                    .urunKiyaslamaOzellik_ozellikAd{
+                                        &:before{
+                                            display:block;
+                                        }
+                                    }
+                                }
+                                .urunKiyaslamaOzellik_ozellikIcerik{
+                                    padding: 0 8px 20px;
+                                    .search-input-wrapper{
+                                        position: relative;
+                                        .search-input{
+                                            margin-bottom: 10px;
+                                            padding-right: 40px;
+                                        }
+                                        .icon-ico_search{
+                                            position: absolute;
+                                            top: 5px;
+                                            right: 5px;
+                                            width: 30px;
+                                            height: 30px;
+                                            text-align: center;
+                                            line-height: 30px;
+                                            &:before{
+                                                font-size: 20px;
+                                            }
+                                        }
+                                    }
+                                    table{
+                                        > tbody{
+                                            >{
+                                                tr{
+                                                    display: table;
+                                                    > td{
+                                                        width: 50%;
+                                                        display: table-cell;
+                                                        vertical-align: top;
+                                                        text-align: left;
+                                                        a{
+                                                            display: inline-block;
+                                                            padding: 0px 0px 0px 20px;
+                                                            margin-bottom: 10px;
+                                                            position: relative;
+                                                            font-family: $light;
+                                                            font-size: 14px;
+                                                            line-height: 17px;
+                                                            color: #414141;
+
+                                                            &:before{
+                                                                font-family: 'icomoon';
+                                                                content: '';
+                                                                width: 12px;
+                                                                height: 12px;
+                                                                display: block;
+                                                                position: absolute;
+                                                                left: 0;
+                                                                top: 50%;
+                                                                font-size: 10px;
+                                                                text-align: center;
+                                                                line-height: 12px;
+                                                                margin-top: -9px;
+                                                                border: 1px solid #414141;
+                                                            }
+                                                            &.link_selected{
+                                                                &:before{
+                                                                    content: '\e908';
+                                                                    border-color: #414141;
+                                                                    background-color: #414141;
+                                                                    color: #fff;
+                                                                } 
+                                                            }
+                                                            .filter-count{
+                                                                display: none !important;
+                                                                color: #C7C8CA;
+                                                                margin-left: 4px;
+                                                                font-family: "light";
+                                                            }
+                                                            &:hover{
+                                                                &:before{
+                                                                    border-color: $lDark;
+                                                                }
+                                                            }
+                                                        }
+                                                        .urunKiyaslamaOzellik_ozellik {
+                                                            .filter-count{
+                                                                display: inline-block;
+                                                                color: #C7C8CA;
+                                                                margin-left: 4px;
+                                                                font-family: "light";
+                                                             }
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                                &.renk {
+                                    tbody {
+                                        display:grid;
+                                        grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
+                                        grid-row-gap: 12px;
+                                        tr {
+                                            .urunKiyaslamaOzellik_ozellik  {
+                                                position: relative;
+                                                text-align: center;
+                                                padding-top: 27px;
+                                                i {
+                                                    margin: 0 !important;
+                                                    width: 100%;
+                                                    text-align: center;
+                                                }
+                                                a {
+                                                    position: static;
+                                                    &:before {
+                                                        content: '';
+                                                        width: 23px;
+                                                        height: 23px;
+                                                        border-radius: 50%;
+                                                        display: inline-block;
+                                                        margin: 0 auto;
+                                                        position: absolute;
+                                                        right: 0;
+                                                        left: 0;
+                                                        top: 0;
+                                                        border: 1px solid #fff;
+                                                    }
+                                                    &:hover {
+                                                        &:before {
+                                                            border: 1px solid #fff;
+                                                        }
+                                                    }
+                                                    &.link_selected {
+                                                        &:before {
+                                                            line-height: 24px;
+                                                            font-size: 12px;
+                                                            border-color: transparent;
+                                                        }
+                                                    }
+                                                }
+                                                &.kirmizi {
+                                                    a {
+                                                        &:before {
+                                                            background: #f00;
+                                                        }
+                                                    }
+                                                }
+                                                &.siyah {
+                                                    a {
+                                                        &:before {
+                                                            background: #000;
+                                                        }
+                                                    }  
+                                                }
+                                                &.mavi {
+                                                    a {
+                                                      &:before {
+                                                        background: #B9D9EB;
+                                                      }  
+                                                    }
+                                                }
+                                                &.pembe {
+                                                    a {
+                                                       &:before {
+                                                        background: #E7C4C9;
+                                                      } 
+                                                    }
+                                                }
+                                                &.camel {
+                                                    a {
+                                                       &:before {
+                                                        background: #C89C76;
+                                                      } 
+                                                    }
+                                                }
+                                                &.kahve {
+                                                    a {
+                                                       &:before {
+                                                        background: #824848;
+                                                      } 
+                                                    }
+                                                }
+                                                &.bordo {
+                                                    a {
+                                                       &:before {
+                                                        background: #550A21;
+                                                      } 
+                                                    }
+                                                }
+                                                &.pudra {
+                                                    a {
+                                                       &:before {
+                                                        background: #efd9dc; 
+                                                      } 
+                                                    }
+                                                }
+                                                &.Nude {
+                                                    a {
+                                                       &:before {
+                                                        background: #E7C8B5; 
+                                                      } 
+                                                    }
+                                                }
+                                                &.mor {
+                                                    a {
+                                                       &:before {
+                                                        background: #65009a; 
+                                                      } 
+                                                    }
+                                                }
+                                                &.gumus {
+                                                    a {
+                                                       &:before {
+                                                        background: #d6d6d6; 
+                                                      } 
+                                                    }
+                                                }
+                                                &.kristal {
+                                                    a {
+                                                       &:before {
+                                                        background: #e5e5e5; 
+                                                      } 
+                                                    }
+                                                }
+                                                &.siyah-metal {
+                                                    a {
+                                                       &:before {
+                                                        background: linear-gradient(193.4deg,#E3E3E3,#667581);
+                                                      } 
+                                                    }
+                                                }
+                                                &.turuncu {
+                                                    a {
+                                                       &:before {
+                                                        background: #f07400; 
+                                                      } 
+                                                    }
+                                                }
+                                                &.rose-gold {
+                                                    a {
+                                                       &:before {
+                                                        background: #f9bbac; 
+                                                      } 
+                                                    }
+                                                }
+                                                &.bej {
+                                                    a {
+                                                       &:before {
+                                                        background: #f6e8df; 
+                                                        border-color: #C7C8CA;
+                                                      } 
+                                                    }
+                                                }
+                                                &.krem, &.Krem {
+                                                    a {
+                                                       &:before {
+                                                        background: #F2EBDB; 
+                                                        border-color: #C7C8CA;
+                                                      } 
+                                                    }
+                                                }
+                                                &.gri {
+                                                    a {
+                                                       &:before {
+                                                        background: #cacaca; 
+                                                      } 
+                                                    }
+                                                }
+                                                &.renkli {
+                                                    a {
+                                                       &:before {
+                                                        background: linear-gradient(193.4deg,#C8FEB4,#A6C1CF,#BF98C4);
+                                                      } 
+                                                    }
+                                                }
+                                                &.beyaz {
+                                                    a {
+                                                       &:before {
+                                                        background: #fff;
+                                                        border-color: #C7C8CA;
+                                                        color: #000;
+                                                      } 
+                                                    }
+                                                }
+                                            }
+                                            .urunKiyaslamaOzellik {
+                                                padding: 0;
+                                                margin-bottom: 0;
+                                                width: 100%;
+                                                text-align: center;
+                                                color: #414141;
+                                            }
+                                        }
+                                    }
+                                }
+                                &.beden {
+                                    tbody {
+                                        display:grid;
+                                        grid-template-columns: repeat(auto-fit, minmax(35px, 1fr));
+                                        grid-row-gap: 12px;
+                                        grid-gap: 5px;
+                                        tr {
+                                            .urunKiyaslamaOzellik_ozellik  {
+                                                position: relative;
+                                                text-align: center;
+                                                a {
+                                                    margin: 0; 
+                                                    padding: 0;
+                                                    text-align: center;
+                                                    border: 1px solid #C7C8CA;
+                                                    width: 100%;
+                                                    line-height: 28px;
+                                                    max-width: 50px;
+                                                    &:before {
+                                                        display: none;
+                                                    }
+                                                    &:hover {
+                                                        border:1px solid #000;
+                                                    }
+                                                    &.link_selected {
+                                                        background: #000;
+                                                        border-color: #000;
+                                                        color: #fff;
+                                                    }
+                                                }
+                                                .filter-count {
+                                                    display: none !important;
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                                &.mrk.live-search{
+                                    .urunKiyaslamaOzellik_ozellikIcerik{ 
+                                        table{
+                                            > tbody{
+                                                >{
+                                                    tr{display: none;}
+                                                    tr.show{display: table;}
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                                &.mrk.live-search.no-result{
+                                    .urunKiyaslamaOzellik_ozellikIcerik{ 
+                                        .search-input-wrapper{
+                                            &:after{
+                                                content:'Aradığınız kriter de marka bulunamadı...';
+                                                font-family: $regular;
+                                                font-size: 13px;
+                                                color: $red;
+                                                padding: 5px 15px;
+                                                display: block;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .kutuFooterDefault {
+            .urunKiyaslamaOzellik_tumunuTemizle {
+                display: inline-block !important;
+                width: 100%;
+                text-align: center;
+                padding: 40px 0;
+                a {
+                    color: #414141;
+                    background-color: #FFF;
+                    border: 1px solid #414141;
+                    font-size: 12px;
+                    font-family: $webl;
+                    text-align: center;
+                    line-height: 40px;
+                    padding: 0 10px;
+                    display: inline-block;
+                }
+            }
+        }
+    }
+
+
+@media screen and (max-width: $breakpointXSM){
+
+    .ems-mobile{
+        &-sort-popup{
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            background: #fff;
+            top: 0;
+            left: 0;
+            z-index: 9999;
+            @include setTransform(translateX(-100%));
+            @include transition(transform 333ms ease-in-out);
+            will-change: transform;
+            .ems-mobile-filter-sort{
+                position: relative;
+                background: $lDark;
+                padding: 18px 40px;
+                text-align: center;
+                .ems-mobile-filter-text{
+                    span{
+                        display: block;
+                        color: #fff;
+                        font-family: $medium;
+                    }
+                }
+                .ems-mobile-filter-btn{
+                    position: absolute;
+                        top: 50%;
+                        right: 15px;
+                        width: 24px;
+                        height: 24px;
+                        margin-top: -12px;
+                        a{
+                            display: block;
+                            text-align: center;
+                            i{line-height: 24px;}
+                            i, i:before{
+                                font-size: 12px;
+                                color: #fff;
+                            }
+                        }
+                }
+            }
+            &-body{
+                position: absolute;
+                top: 50px;
+                left: 0;
+                width: 100%;
+                height: calc(100% - 100px);
+                overflow-x: hidden;
+                padding-top: 15px;
+                padding-bottom: 15px;
+                ul{
+                    li{
+                        a{
+                            display: block;
+                            font-family: $regular;
+                            color: $darkBlack;
+                            font-size: 14px;
+                            padding: 15px 20px 15px 50px;
+                            position: relative;
+                            &:before{
+                                content: '';
+                                width: 18px;
+                                height: 18px;
+                                border: solid 1px $dGray;
+                                position: absolute;
+                                top: 50%;
+                                left: 20px;
+                                margin-top: -10px;
+                            }
+                        }
+                        &.selected{
+                            a{
+                                &:before{
+                                    border-color: $lDark;
+                                    background: $lDark;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        &-filter-buttons{
+            width: 100%;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            height: 40px;
+            .btnDefault {
+                display: inline-block;
+                vertical-align: middle;
+                width: 50%;
+                background: $lDark;
+                span{ color: #fff; }
+                &.btnDefaultMobFilterAction, &.btnDefaultMobPpFilterAction{
+                    background: $btnColor;
+                }
+            }
+        }
+    }
+
+    .ems-custom-filtered{
+        border: none;
+        margin: 0;
+        &-header{
+            span{
+                font-size: 20px;
+            }
+        }
+        &-body{
+            max-width: 90%;
+            > ul{
+                > li{
+                    width: 100%;
+                }
+            }
+        }
+        &-left{
+            padding-right:10px;
+        }
+        &-right{
+            padding-left:10px;
+        }
+        &-footer{
+            max-width: 100%;
+            margin: 0 auto;
+            width: 100%;
+            > div{
+                width: 50%;
+                display: inline-block;
+                .btnDefault, .btnDefault span{
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+    
+    .sort-popup-ready{ 
+        overflow: hidden;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+    .sort-popup-animate{
+        .ems-mobile{
+            &-fixed-popup{
+                @include setTransform(translateX(0));
+            }    
+        }
+    }
+    .mobile-element-filter-span-select {
+        display: none;
+    }
+}

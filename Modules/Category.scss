@@ -1,0 +1,247 @@
+.kutuKategori{
+    border-bottom: 1px solid #C7C8CA;
+    padding: 0 12px;
+    .kutuFooterDefault {
+        /*display: none;*/
+        padding: 0 8px;
+        position: relative;
+        top: -10px;
+        margin-bottom: 10px;
+        background: #fff;
+        .ems-more-button {
+            .less {
+                display: none;
+                &:after {
+                    content: '...';
+                }
+            }
+            .more {
+                &:after {
+                    content: '...';
+                }
+            }
+        }
+    }
+    .kutuBodyKategori {
+        padding: 0 8px 20px;
+    }
+    .kutuHeaderKategori{
+        .btnCatShow{
+            text-align: left;
+            font-family: $bold;
+            font-size: 14px;
+            letter-spacing: 1px;
+            position: relative;
+            cursor: pointer;
+            display: block;
+            span {
+                padding: 18px 0 23px 0;
+                display: block;
+                position: relative;
+                font-size: 16px;
+                font-family: $medium;
+                &:after{
+                    content: "";
+                    position: absolute;
+                    right: 0;
+                    top: 50%;
+                    width: 10px;
+                    height: 2px;
+                    margin-top: -1px;
+                    background: #C7C8CA;
+                }
+            }
+            small {
+                font-size: 12px;
+                color: #C7C8CA;
+                font-style: italic;
+                display: block;
+            }
+        }
+        &.kapali {
+            .btnCatShow{
+                span {
+                    &:before {
+                        content: '';
+                        position: absolute;
+                        right: 4px;
+                        margin-top: 7px;
+                        width: 2px;
+                        height: 10px;
+                        background: #C7C8CA;
+
+                    }
+                }
+            }
+        }
+    }
+    .kutuKategori_icerik {
+        max-height: 180px; 
+        overflow: hidden;
+    }
+    ul.menuKategori{
+        
+        padding-top: 1px;
+        li{
+            .filter-count{
+                /*display: none;*/
+                color: #C7C8CA;
+                margin-left: 4px;
+                font-family: $light;
+            }
+            b{
+                display: none;
+            }
+            a{
+                display:inline-block;
+                padding: 0px 0px 0px 20px;
+                margin-bottom: 10px;
+                position: relative;
+                font-family: $light;
+                font-size: 14px;
+                line-height: 17px;
+                color: #414141;
+                &:hover{
+                    &:before{
+                        border-color: $lDark;
+                    }
+                }
+                &:before{
+                    font-family: 'icomoon';
+                    content:'';
+                    width: 12px;
+                    height: 12px;
+                    display: block;
+                    position: absolute;
+                    left: 0;
+                    top: 50%;
+                    font-size: 10px;
+                    text-align: center;
+                    line-height: 12px; 
+                    margin-top: -9px;
+                    border: 1px solid #414141;
+                }
+            }
+            &.act{
+                a.active{
+                    &:before{
+                        content:'\e908';
+                        border-color: #414141;
+                        background-color: #414141;
+                        color: #fff;
+                    }
+                }
+            }
+        }
+        > li{
+             > ul{
+                /*padding-left: 15px;*/
+            }
+        }
+    }
+}
+
+body.ems-cat-menu-opened {
+    .kutuKategori {
+        .kutuFooterDefault {
+            .less {
+                display: block;
+            }
+            .more {
+                display: none;
+            }
+        }
+        .kutuKategori_icerik {
+            max-height: none;
+        }
+    }
+}
+
+.kutuKategori.kapali{
+    .kutuHeaderKategori{
+        .btnCatShow{
+            &:after{
+                @include setTransform(rotate(0deg));
+            }
+        }
+    }
+    .kutuFooterDefault {
+        display: none;
+    }
+}
+
+.kutuSolMenuTree{
+    margin-top: 19px;
+    .sStylerMainWrp.sStylerWrp_select,
+    .kutuHeaderSolMenuTree{display:none;}
+
+    .kutuBodyDefault{
+        > ul{
+            > li{
+                b{display:none;}
+                > a{
+                    display: block;
+                    padding-bottom: 30px;
+                    font-size: 36px;
+                    display: none;
+                }
+                > ul{
+                    display: table;
+                    width: 100%;
+                    > li{
+                        text-align: left;
+                        position: relative;
+                        a{
+                            display: block;
+                            color: #6E6D6E;
+                            padding: 9px 10px 8px 10px;
+                            position: relative;
+                            border-top: 1px solid #e6e6e7;
+                            text-transform: uppercase;
+                            font-size: 11px;
+                            letter-spacing: 1px;
+                            @media screen and (min-width: $breakpointXSM){
+                                &:hover{
+                                    color: $lDark;
+                                }
+                            }
+                            &:hover {
+                                color: #000000;
+                            }
+                        }
+                        &.act{
+                            a{ 
+                                color: #000000;
+                            }
+                        }
+                        &:last-child {
+                            a {
+                                border-bottom: 1px solid #e6e6e7;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: $breakpointXSM){
+    .kutuSolMenuTree{
+        .kutuBodySolMenuTree {display: none;}
+        .sStylerMainWrp.sStylerWrp_select{
+            display: block;
+            /*position: fixed;
+            top: 49px;
+            left: 0;*/
+            width: 100%;
+            z-index: 1;
+            background: #fff;
+            .sStylerWrp{
+                /*line-height: 35px;
+                height: 45px;*/
+                &:after{right: 10px;}
+            }
+        }
+    }
+}

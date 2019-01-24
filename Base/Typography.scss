@@ -1,0 +1,19 @@
+@include fontFace('regular', '/styles/fonts/NunitoSans/regular/nunitosans-regular-webfont', normal);
+@include fontFace('medium', '/styles/fonts/NunitoSans/medium/nunitosans-semibold-webfont', normal);
+@include fontFace('light', '/styles/fonts/NunitoSans/light/nunitosans-light-webfont', normal);
+@include fontFace('bold', '/styles/fonts/NunitoSans/bold/nunitosans-bold-webfont', normal);
+@include fontFace('playr', '/styles/fonts/domainesansdisplayweb/regular/domainesansdisplayweb-regular-webfont', normal);
+@include fontFace('webl', '/styles/fonts/domainesanstextweb/light/domainesanstextweb-light-webfont', normal);
+@include fontFace('webr', '/styles/fonts/domainesanstextweb/regular/domainesanstextweb-regular-webfont', normal); 
+
+@include fontFace('tl', '/styles/fonts/tl/abakutlsymsans', normal);
+
+// Old
+/*
+@include fontFace('bold', '/styles/fonts/roboto/bold/RobotoBold', normal);
+@include fontFace('sBold', '/styles/fonts/roboto/medium/RobotoMedium', normal);
+@include fontFace('light', '/styles/fonts/roboto/light/RobotoLight', normal);
+@include fontFace('pdRegular', '/styles/fonts/play-fair/regular/PlayfairDisplayRegular', normal);
+@include fontFace('pdBoldItalic', '/styles/fonts/play-fair/bold-italic/PlayfairDisplayBoldItalic', normal);
+@include fontFace('dRegular', '/styles/fonts/play-fair/regular/PlayfairDisplayRegular', normal);
+@include fontFace('dItalic', '/styles/fonts/play-fair/bold-italic/PlayfairDisplayBoldItalic', normal);*/

@@ -1,0 +1,484 @@
+.ems-page-member.hidden-left-menu{
+    .ems-col-left{display: none;}
+    .ems-col-full{width: 100%; padding-left: 0; padding-right: 0; float: none;}
+    > .ems-container {max-width: 1400px;}
+}
+.ems-service-list {
+    border: 0 !important;
+    .ems-container {
+        padding: 0; 
+    }
+    .ems-col-full {  
+        width: 100% !important; 
+        padding-left: 0 !important;
+    }
+}
+.mod-service-list{
+    padding-top: 14px;
+    &-inner{
+        position: relative;
+        background: #F9F9F9;
+        display: flex;
+        @media screen and (min-width: $breakpointXSM){
+            /*padding-right: 450px;*/
+        }
+        &-wrp {
+            width: 100%;
+            max-width: 420px;
+            float: left;
+            padding: 20px;
+            background: #F9F9F9;
+        }
+    }
+    &-tab { 
+        padding: 20px;
+        ul {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border: 1px solid #C7C8CA;
+            li {
+                width: 100%;
+                a {
+                    padding: 12px 0px 11px 0;
+                    width: 100%;
+                    font-family: $bold;
+                    text-align: center;
+                    display: block;
+                    color: #C7C8CA;
+                    position: relative;
+                    &:before {
+                        content: '';
+                        position: absolute;
+                        left: 0;
+                        bottom: 0;
+                        width: 100%;
+                        height: 0;
+                        background: #E7BBB4;
+                    }
+                }
+                &:first-child {
+                    border-right: 1px solid #C7C8CA;
+                }
+                &.select {
+                    a {
+                        color: #E7BBB4;  
+                        &:before {
+                            height: 3px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &-header{ 
+        > span {
+        }
+        > span > span{
+            display: block;
+            font-family: $medium;
+            text-align: center;
+            margin: 20px 0;
+            font-size: 21px;
+        }
+        .ems-form{
+            &-inner{
+                @include flex();
+                flex-wrap: wrap;
+                margin-bottom: 30px;
+                align-items: flex-end;
+                .ems-field{
+                    margin-bottom: 10px;
+                    .ems-form-label{
+                        width: auto;
+                        position: static;
+                        opacity: 1;
+                        visibility: visible;
+                        padding-left: 0;
+                        font-family: $bold;
+                        color: #231F20;
+                    }
+                    .ems-form-obj{
+                        padding-bottom: 0;
+                    }
+                    &.select-2 {
+                    .sStylerMainWrp.sStylerWrp_select .sStylerWrp {
+                        background: transparent;
+                    }
+                    }
+                    &.select-3{
+                        flex: 3;
+                        margin-right: 20px;
+                    }
+                    &.select-4{
+                        flex: 1;
+                        /*max-width: 160px;*/
+                        display: flex;
+                        flex-wrap: wrap;
+                        &:before {
+                            content: 'Listede Ara';
+                            width: 100%;
+                            font-family: $bold;
+                        }
+                        input {
+                            padding: 11px;
+                        }
+                        .ems-form-obj-input {
+                            flex: 3;
+                            padding-right: 20px;
+                        }
+                        .ems-form-obj-btn {
+                            flex: 1;
+                        }
+                        a.btnSrvArama{
+                            background: $lDark;
+                            padding: 15px 10px 14px 10px;
+                            @media screen and (min-width: $breakpointXSM){
+                                &:hover{
+                                    background: $btnColor;
+                                }
+                            }
+                        }
+                    }
+                }
+                .sStylerMainWrp.sStylerWrp_select .sStylerWrp {
+                    padding: 11px;
+                }
+            }
+        }
+    }
+    &-body{
+        @media screen and (min-width: $breakpointXSM){
+        /*position: absolute;
+        top: 55px;
+        right: 0;*/
+        height: 100%;
+            ::-webkit-scrollbar {
+                width: 0;
+            }
+            ::-webkit-scrollbar-track {
+                background: $eGray;
+            }
+            ::-webkit-scrollbar-thumb {
+                background: $lDark;
+            }
+            ::-webkit-scrollbar-thumb:window-inactive {
+                background: $lDark;
+            }
+            &:hover{
+                ::-webkit-scrollbar {
+                    width: 3px;
+                }
+            }
+        }
+    }
+    .address-detail {
+        /*padding-left: 420px;*/
+        width: 100%;
+        .back-btn,
+        .toggle-map,
+        .left-column{display: none;}
+        .map{
+            width: 100%;
+            height: 100%;
+            /*height: 420px;*/
+        }
+        .right-column {
+            height: calc(100% - 0px);
+            min-height: 560px;
+        }
+        &-inner {
+            height: calc(100% - 0px);
+        width: 100%;
+        }
+        .service-work-wrapper {
+            text-align: left;
+            .service-work-hours {
+                font-family: $bold;
+            }
+            table {
+                margin: 10px 0;
+            }
+            th, tr {
+                line-height: 20px;
+                font-weight: normal;
+            }
+        }
+    }
+    
+    .service-list{
+        @media screen and (min-width: $breakpointXSM){
+            /*position: absolute;
+            top: 0;
+            left: 0;*/
+            width: 100%;
+            height: 100%;
+            max-height: 501px;
+            overflow-x: hidden;
+            max-height: 420px; 
+            /*padding-right: 30px;*/
+        }
+    }
+    .servisIcerik{
+        @include flex();
+        flex-wrap: wrap;
+        align-items: flex-start;
+        font-family: $bold;
+        font-size: 15px;
+        @media screen and (min-width: $breakpointXSM){
+            /*max-width: 340px;*/
+        }
+        .servis_bilgi{display: none;}
+        .pServisListe {
+            @include flex();
+            @include flexDirection(column);
+            justify-content: flex-start;
+            width: 100%;
+            position: relative;
+            /*height: 50px;
+            overflow: hidden;*/
+            padding: 1.618em .618em 1.618em 40px;
+            border-top: 1px solid #DADADA;
+            list-style-type: none;
+            counter-increment: auto-increment-numbers;
+
+            > div{
+                &:empty{display: none;}
+            }
+            .divServisListe_FirmaAdi{
+                font-family: $bold;
+                font-size: 14px;
+                order: 1;
+                position: relative;
+                cursor: pointer;
+            }
+            .divServisListe_Adres{
+                order: 2;
+                line-height: 22px;
+                font-size: 14px;
+                /*min-height: 45px;
+                max-height: 65px;*/
+                overflow: hidden;
+                font-family: $light;
+            }
+            .divServisListe_Telefon{
+                order: 3;
+                font-family: $light;
+                font-size: 14px;
+                margin: 9px 0;
+                &:before {
+                    content: 'Telefon: ';
+                }
+            }
+            .divServisListe_Email{
+                display: none;
+                order: 4;
+            }
+            .tableServisCalismaSaatleri {
+                order: 5;
+                text-align: left;
+                font-family: $regular;
+                .service-work-hours {
+                    font-family: $medium;
+                    display: block;
+                    margin: 10px 0;
+                }
+                span {
+                    font-family: "regular";
+                    font-weight: normal;
+                }
+            }
+            .divServisListe_Koordinat{
+                order: 5;
+                text-align: left;
+                > a{
+                    display:inline-block;
+                    margin-top: 15px;
+                    text-align: center;
+                    margin: 15px 10px 0 0;
+                    span{
+                        font-size: 16px;
+                        font-family: $light;
+                        text-decoration: underline;
+                        color: #979797;
+                    }
+                    &.show-map-btn{
+                        /*display: none;*/
+                        span{display: none;}
+                        &:before {
+                            content:'Haritada Göster';
+                            font-family: $light;
+                            text-decoration: underline;
+                            color: #979797;
+                            font-size: 16px;
+                        }
+                        &:hover {
+                            &:before {
+                                color: #231F20;
+                                text-decoration: none;
+                            }
+                        }
+                    }
+                    &.show-all {
+                        color: #979797;
+                        font-family: $light;
+                        font-size: 12px;
+                        width: 100%;
+                        font-weight: normal;
+                        text-align: left;
+                        margin: 0px 10px 10px 0;
+                        i {
+                            font-size: 8px;
+                            margin-left: 5px;
+                        }
+                        &:hover {
+                            &:before {
+                                color: #231F20;
+                            }
+                        }
+                    }
+                    &:hover {
+                        span {
+                            color: #231F20;
+                            text-decoration: none;
+                        }
+                    }
+                }
+            }
+            &.selected{
+                height: auto;
+                margin-bottom: 10px;
+                padding-bottom: 15px;
+                .divServisListe_FirmaAdi{
+                    border: none;
+                    &:after{display: none;}
+                }
+                .tableServisCalismaSaatleri {
+                    display: block;  
+                    margin-bottom: 20px;
+                }
+                .divServisListe_Koordinat {
+                    > .show-all {
+                        font-size: 0;
+                        &:before {
+                            content: 'Daha Az';
+                            font-size: 12px !important;
+                        }
+                        i:before {
+                            content: '\e903';
+                            font-family: 'icomoon';
+                            font-size: 8px !important;
+                        }
+                    }
+                }
+            }
+            .divServisListe_DepoSec,
+            .divServisListe_Yetkili,
+            .divServisListe_ServisTur,
+            .divServisListe_WebAdresi,
+            .divServisListe_UlkeSehirSemt,
+            .divServisListe_Fax,
+            .tableServisListe_tdResim{display: none;}
+            &:before {
+                content: counter(auto-increment-numbers);
+                font-family: $light;
+                color: #fff;
+                width: 23px;
+                height: 36px;
+                position: absolute;
+                left: 0;
+                top: 25px;
+                text-align: center;
+                line-height: 28px;
+                font-size: 14px;
+                background:url(#{$baseHref + "/images/frontend/map.svg"}) no-repeat;
+            }
+        }   
+    }
+}
+
+@media screen and (min-width: 850px) and (max-width: 1024px){
+    .mod-service-list-header .ems-form-inner .ems-field.select-2,
+    .mod-service-list-header .ems-form-inner .ems-field.select-3{margin-right: 10px;}
+}
+
+@media screen and (max-width: $breakpointXSM){
+    .mod-service-list{
+        &-inner{
+            max-width: 100%;
+            margin-left: auto;
+            flex-direction: column;
+            &-wrp {
+                padding: 0;
+                max-width: none;
+                background: #Fff;
+            }
+        }
+        &-header{
+            padding: 20px;  
+            > span > span{
+                font-size: 21px;
+            }
+            .ems-form{ 
+                &-inner{
+                    @include flex();
+                    @include flexDirection(column);
+                    margin-bottom: 0;
+                    .ems-field{
+                        margin-bottom: 10px;
+                        &.select-2,
+                        &.select-3{
+                            margin-right: 0;
+                        }
+                        &.select-4{
+                            margin-bottom: 0;
+                        }
+                    }
+                }
+            }
+        }
+        &-tab {
+            padding: 20px 20px 0 20px
+        }
+        .servisIcerik{
+            padding:20px 20px 40px 20px; 
+            .pServisListe{
+                width: 100%;
+                max-width: 100%;
+            }
+        }
+        .mod-service-list-body {
+            display: none;
+        }
+        .address-detail {
+            display: none;
+            padding: 20px;
+            .map {
+                height: 400px;
+            }
+            .right-column {
+                min-height: auto;
+            }
+        }
+        &.view-list {
+            .mod-service-list-body {
+                display: block;
+            }
+        }
+        &.view-map {
+            .address-detail {
+                display: block;
+            }
+        }
+    }
+    .service-list-layout{
+        .ems-pay-info{
+            background: #f6f7f9;
+        }
+    }
+    .ems-service-list {
+        .ems-col-full {
+            padding: 0 !important;
+        }
+    }
+}

@@ -1,0 +1,193 @@
+.widget, .ems-tab-widget{
+    display: none;
+    padding: 50px 35px;
+    border-top: 1px solid #e6e6e7;
+    border-bottom: 1px solid #e6e6e7;
+    margin-bottom: -1px;
+    
+    &-active, &.plugins-active{
+        display: block;
+    }
+    &.visilabs-widget{
+        .swiper-pagination{ display:none; }
+    }
+    .swiper-title, .navigation-js li > a {
+        /*padding-bottom: 40px;*/
+        padding: 0 10px 40px 10px;
+        span{
+            display: inline-block;
+            font-size: 14.5px;
+            text-align: left;
+            font-family: $medium;
+            color: #000;
+            padding-bottom: 12px;
+            border-bottom: 1px solid #000;
+        }
+    }
+    .swiper-button-prev,
+    .swiper-button-next,
+    .swiper-pagination{
+        display: none;
+    }
+
+    ul.navigation-js { 
+        display: flex;
+        /*padding: 0 10px;*/
+        li {
+            margin-right: 30px;
+            &:last-child {
+                margin: 0;
+            }
+            > a {
+                span {
+                    color: rgba(65,65,65,.5);
+                    border-bottom: 0;
+                }
+            }
+            &.selected {
+                a {
+                    span {
+                        color: #000;
+                        border-bottom: 1px solid #000; 
+                    }
+                }
+            }
+        }
+    }
+
+    &.widget-new-shoes, &.widget-clothing {
+        .swiper-inner {
+            overflow: hidden !important;
+            position: relative; 
+        }
+    }
+    
+    ul.emosInfinite{
+        .ems-prd{
+            width: 25%;
+            /*padding-left: 0;
+            padding-right: 0;*/
+            padding: 0px 10px;
+            margin-top: 0;
+            &-color-info, &-group{display: none;}
+            &-content{
+                padding-bottom: 0;
+            }
+            &-content-mask{
+                /*min-height: 75px;
+                max-height: 75px;*/
+            }
+            &-notice {
+                display: none;
+            }
+            &-content {
+                padding-top: 19px;
+            }
+        }
+        .ems-prd-mask-wrp {
+            display: none;
+        }
+    }
+}
+
+@media screen and (min-width: $breakpointXSM){
+    .widget{
+        &.items-1,
+        &.items-2,
+        &.items-3{
+            .swiper-wrapper{/*justify-content: center;*/}
+        }
+    }
+}
+
+.widget-pagecart{
+    max-width: 820px;
+    margin: 0 auto;
+    padding-left: 50px;
+    padding-right: 50px;
+    .swiper-title span{
+        padding-top: 50px;
+    }
+    ul.emosInfinite{
+        .ems-prd{
+            padding: 0;
+            width: 33.333%;
+            &-inner{
+                padding: 10px;
+            }
+        }
+    }
+    .swiper-button-prev,
+    .swiper-button-next{
+        display: inline-block;
+        padding-top: 0;
+        i{line-height: 40px;}
+        i, i:before{
+            color:$lDark;
+            font-size: 21px;
+        }
+    }
+    .swiper-button-prev{
+        left: 0;
+    }
+    .swiper-button-next{
+        right: 0;
+    }
+}
+
+.ems-page-detail{
+    .widget ul.emosInfinite{
+        .ems-prd{padding-left:10px; padding-right:10px;}
+    }
+}
+
+@media screen and (max-width: $breakpointXSM){
+    .widget{
+        overflow: hidden;
+        padding: 30px 20px; 
+        .swiper-title{
+            text-align: center;
+            padding: 0 10px 30px 10px;
+            span{
+                border: 0;
+                padding-bottom: 0px;
+            }
+        }
+        .swiper-inner{
+            overflow: visible;
+            .ems-prd-name {
+                a {
+                    font-size: 16px;
+                    line-height: 1.6rem;
+                }
+            }
+            .urunListe_satisFiyat {
+                font-size: 16px; 
+            } 
+            .slide-button {
+                display: none;
+            }
+            .ems-prd-price-first {
+                display: none;
+            }
+        }
+        ul.emosInfinite{
+            .ems-prd{
+                width: 50%;
+                padding:0 5px;
+                &-content{
+                    width: 100%;
+                }
+            }
+        }
+        .swiper-button-next,
+        .swiper-button-prev{
+            display: none;
+        }
+    }
+    .widget-pagecart{display: none;}
+}
+
+@media screen and (max-width: 480px){
+    .widget .emosInfinite .ems-prd{/*width:135px !important;*/}
+}

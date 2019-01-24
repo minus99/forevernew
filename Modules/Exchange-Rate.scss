@@ -1,0 +1,160 @@
+@media screen and (min-width: $breakpointXSM){
+    .kutuKurDegis{
+        position: relative;
+        display: none;
+        .kutuKurDegis_pb {
+            > span{
+                cursor: pointer;
+                font-family: $medium;
+                font-size: 14px;
+                color: $lDark;
+                background: none;
+                border: none;
+                padding:13px 10px;
+                display: inline-block;
+                height: auto;
+                line-height: 1;
+                @include transition(all .2s ease);
+                i{
+                    display: inline-block;
+                    vertical-align: middle;
+                    margin-left:10px;
+                }
+                i, i:before{
+                    font-size: 8px;
+                }
+            }
+            > ul{
+                position: absolute;
+                top: 80px;
+                left: 0;
+                right: 0;
+                margin-left: auto;
+                margin-right: auto;
+                z-index: 1;
+                background: #fff;
+                padding:15px 10px;
+                border-top: 1px solid $border;
+                width: auto;
+                opacity: 0;
+                visibility: hidden;
+                @include transition(all .2s ease);
+                li{
+                    a{
+                        padding: 5px 0;
+                        display:block;
+                        font-family:$regular;
+                        font-size: 14px;
+                        text-align: center;
+                    }
+                }
+            }
+            &.opened{
+                > span{
+                    background: #fff;
+                }
+                > ul{
+                    opacity: 1;
+                    visibility: visible;
+                }
+            }
+        }
+    }
+}
+
+.kutuKurDegis{
+    .kutuHeaderKurDegis, .kutuKurDegis_lbfAciklama, .kutuFooterKurDegis, .kutuKurDegis_pb { display: none; }
+}
+
+.vailKur{z-index: 5; transition: none;}
+
+@media screen and (max-width: $breakpointXSM){
+    .kutuKurDegis{
+        .kutuKurDegis_pb {
+            > span{
+                cursor: pointer;
+                font-family: $medium;
+                font-size: 14px;
+                color: #fff;
+                background: none;
+                border: none;
+                padding:12px 10px;
+                display: inline-block;
+                height: auto;
+                line-height: 1;
+                @include transition(all .2s ease);
+                border-left: 1px solid rgba(230, 231, 233, .2);
+                i{
+                    display: inline-block;
+                    vertical-align: middle;
+                    margin-left: 10px;
+                }
+                i, i:before{
+                    font-size: 11px;
+                    color: #fff;
+                }
+            }
+            > ul{
+                display: none;
+                position: absolute;
+                top: 50px;
+                left: 0;
+                z-index: 2;
+                background: #fff;
+                padding:10px 20px;
+                border-top: 1px solid $border;
+                width: 100%;
+                li{
+                    border-top:1px solid $border;
+                    &:first-child{border-top: none;} 
+                    a{
+                        padding: 15px 20px 15px 40px;
+                        display:block;
+                        font-family:$regular;
+                        font-size: 14px;
+                        text-align: left; 
+                        position: relative;
+                        &:before{
+                            content: '';
+                            width: 18px;
+                            height: 18px;
+                            border: 1px solid #e6e7e9;
+                            border-radius: 100%;
+                            background: #fff;
+                            position: absolute;
+                            left: 0;
+                            top: 50%;
+                            margin-top: -10px;
+                        }
+                    }
+                    &.selected{
+                        a{
+                            &:before{
+                                border-color: #e6e7e9;
+                            }
+                            &:after{
+                                content: '';
+                                width: 10px;
+                                height: 10px;
+                                border-radius: 100%;
+                                background: #1edeac;
+                                position: absolute;
+                                left: 5px;
+                                top: 50%;
+                                margin-top: -5px;
+                            }
+                        }
+                    }
+                }
+            }
+            &.opened{
+                > ul{
+                    display: block;
+                }
+            }
+        }
+    }
+    .mobile-kutuKurDegis-popup{
+        .vailKur{opacity: .7; visibility: visible; }
+    }
+}

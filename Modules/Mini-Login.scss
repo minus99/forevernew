@@ -1,0 +1,695 @@
+@media screen and (min-width: $breakpointXSM){
+    .mod-mini-login{
+        .ems-user-info{
+            span[id$="lbfUYE_SAYIN"]{
+                display: block;
+                font-family:$medium;
+                font-size:15px;
+                padding:20px 0px;
+                border-bottom:1px solid $border;
+                text-align: left;
+                position: relative;
+                &:empty{display: none;}
+                > span{
+                    display: block;
+                }
+                .mini-login-close{
+                    position: absolute;
+                    top: -12px;
+                    right: -24px;
+                    width: 24px;
+                    height: 24px;
+                    margin-top: -11px;
+                    z-index: 1;
+                    text-align: center;
+                    cursor: pointer;
+                    i{line-height: 24px;}
+                    i, i:before{
+                        font-size: 10px;
+                        color: $gray3;
+                    }
+                }
+            }
+        }
+        &-body{
+            position: absolute;
+            top: 100px;
+            right: 0;
+            /*left: 0;*/
+            width: 346px;
+            /*width: 100%;*/
+            max-width: 400px;
+            height:auto;
+            z-index: 16;
+            margin-left: auto;
+            margin-right: auto;
+            padding: 24px 26px;
+            display: block;
+            -webkit-box-shadow: 0 2px 17px rgba(0,0,0,.3);
+            box-shadow: 0 2px 17px rgba(0,0,0,.3);
+            @include transition(all 0.3s ease);
+            opacity: 0;
+            visibility: hidden;
+            .sub{
+                .ems-form{
+                    .ems-field{
+                        &-submit{
+                            .btnKutuLogin{
+                                span{ @include transition(all 0.2s ease); font-size: 12px;}
+                                &:hover{ background-color: #1a1a1a; }
+                            }
+                        }
+                        &-free{
+                            span[id$="lbflnkUyeOlmak"]{
+                                a{
+                                    span{ @include transition(all .2s ease); }
+                                    &:hover{
+
+                                        span{color: $btnColor;}
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                .ems-user-pages{
+                    > div {
+                        a{
+                            &:hover{
+                                color: $btnColor;
+                            }
+                            &.btnKutuLogout{
+                                padding-top: 18px;
+                                padding-bottom: 18px;
+                                margin-top: 20px;
+                                &:hover{
+                                    color: #fff;
+                                }
+                            }
+                        }
+                    }               
+                }
+            }
+        }
+    }
+
+    .mini-login-animate{
+        .mod-mini-login{
+            &-header{
+                &:after{
+                    bottom: 0;
+                    opacity: 1;
+                    visibility: visible;
+                }
+            }
+        } 
+    }
+
+    .ems-logoff.mini-login-ready{
+        .mod-mini-login{
+            &-body{
+                display: block;
+            }
+        }
+    }
+    .ems-logoff.mini-login-animate{
+        .mod-mini-login{
+            &-body{
+                top: 60px;
+                opacity: 1;
+                visibility: visible;
+            }
+        }
+        /*.vailLogin{
+            opacity: .2;
+            visibility: visible;
+        }*/
+    }
+
+    .ems-login.mini-login-ready{
+        .mod-mini-login{
+            &-body{
+                display: block;
+            }
+        }
+    }
+    .ems-login.mini-login-animate{
+        .mod-mini-login{
+            &-body{
+                top: 60px;
+                opacity: 1;
+                visibility: visible;
+                display: none !important;
+            }
+        }
+        /*.vailLogin{
+            opacity: .2;
+            visibility: visible;
+        }*/
+    }
+    .ems-logoff.mini-login-animate, .ems-login.mini-login-animate{
+        .mod-mini-login-body .sub {
+            .ems-form-inner{
+                opacity: 1;
+                @include setTransform(translateY(0));
+            }
+            .ems-user-pages{
+                opacity: 1;
+                @include setTransform(translateY(0));
+            }   
+        }
+    }
+}
+
+.ems-logoff {
+    .mod-mini-login-header {
+        span[id$="lbfKUTU_HESABIM"] {
+            display: none;
+        }
+    }
+}
+
+/*Languages*/
+.tr-TR .mod-mini-login-body .sub .ems-form-inner .ems-field .seperator span.tr{display: block;}
+.en-US .mod-mini-login-body .sub .ems-form-inner .ems-field .seperator span.en {display: block;}
+
+.mod-mini-login{
+    &-inner {
+        position: relative;
+        display: flex;
+        .btnKutuLogout {
+            background: none;
+            color: #000;
+            padding:14px 0px 14px 15px;
+            font-family: $light;
+            &:hover{
+                background: none;
+            }
+            span {font-size: 14px;} 
+        }
+    }
+    &-header{
+        cursor: pointer;
+        padding:14px 15px;
+        @include transition(all 333ms ease);
+        position: relative;
+        > span[id$="lbhKUTU_HESABIM"]{
+            display: inline-block;
+            font-family: $light;
+            font-size: 14px;
+            /*max-width: 70px;
+            text-overflow: ellipsis;*/
+            white-space: nowrap;
+           /* overflow: hidden;*/
+            position: relative;
+            /*&:before{
+                font-family: 'icomoon';
+                content: '\e909';
+                font-size: 19px;
+                display: inline-block;
+                vertical-align: middle;
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 19px;
+                height: 19px;
+                border-radius: 100%;
+                z-index: 1;
+            }*/
+            &:empty{display: none;}
+        }
+        > span[id$="lbfkutuUyeGiris1"]{
+            span {
+                display: inline-block;
+                vertical-align: middle;
+                font-family: $light;
+            }
+            span{ /*display: none;*/}
+            &:empty{display: none;}
+        }
+        /*&:after{
+            content:'';
+            position: absolute;
+            bottom: -20px;
+            left: 0;
+            right: 0;
+            margin: 0 auto;
+            width: 20px;
+            height: 12px;
+            background:url(#{$baseHref + "/images/frontend/mini-cart-triangle.png"}) no-repeat;
+            z-index: 16;
+            opacity: 0;
+            visibility: hidden;
+            @include transition(all 0.3s ease);
+        }*/
+    }
+    &-body{
+        background: #fff;
+        .sub {
+            display: none;
+            .ems-message{
+                display: table;
+                width: 100%;
+                text-align: center;
+                margin-bottom: 0;
+                margin-top: 20px;
+                &:empty{
+                    display: none;
+                }
+            }
+            .sub-title{
+                display: block;
+                /*padding:20px 40px 20px 40px;
+                border-bottom: 1px solid $eGray;*/
+                text-align: center;
+                position: relative;
+                span{
+                    display: inline-block;
+                    font-size: 20px;
+                    color: $lDark;
+                    font-family: $webl;
+                    margin-bottom: 15px;
+                    /*&:before{
+                        font-family: 'icomoon';
+                        content: '\e909';
+                        font-size: 20px;
+                        display: inline-block;
+                        margin-right: 10px;
+                        display: none;
+                    }*/
+                }
+                p {
+                    font-size: 15px;
+                    font-family: $light;
+                    padding: 10px 0 0;
+                    margin: 0;
+                }
+                .mini-login-close{
+                    position: absolute;
+                    top: -12px;
+                    right: -24px;
+                    width: 24px;
+                    height: 24px;
+                    margin-top: -11px;
+                    z-index: 1;
+                    text-align: center;
+                    cursor: pointer;
+                    i{line-height: 24px;}
+                    i, i:before{
+                        font-size: 10px;
+                        color: $gray3;
+                    }
+                }
+            }
+            .ems-form{
+                &-inner{
+                    /*padding:30px 20px;*/
+                    @media screen and (min-width: $breakpointXSM){
+                        @include transition(all 0.3s ease);
+                        opacity: 0;
+                        @include setTransform(translateY(20px));
+                    }
+                    .ems-field{
+                        .ems-form-label {
+                            top: 13px;
+                        }
+                        .ems-form-obj{
+                            padding-bottom: 12px;
+                            input{
+                                background: transparent;
+                                border: 1px solid #414141;
+                                height: 44px;
+                                -webkit-box-shadow: 0 2px 4px rgba(0,0,0,.07);
+                                box-shadow: 0 2px 4px rgba(0,0,0,.07);
+                                font-size: 13px;
+                            }
+                        }
+                        #lnkSifremiUnuttum{
+                            display: inline-block;
+                            span{
+                                font-family: $light; 
+                                font-style: italic;
+                            }
+                            &:hover{
+                                span{color: $btnColor;}
+                            }
+                        }
+                        &-submit{
+                            @include flexDirection(column);
+                            .btnKutuLogin{
+                                background: #000;
+                                color: #fff;
+                                margin: 20px 0;
+                                &:hover {
+                                    background: #333;
+                                }
+                            }
+                            .pageLogin_btnFacebookLoginKutu{
+                                .btnFacebookLoginKutu{margin-top: 15px;}
+                            }
+                        }
+                        &-free{
+                            span[id$="lbflnkUyeOlmak"]{
+                                width: 100%;
+                                display: block;
+                                margin-top: 20px;
+                                a{
+                                    color: #000;
+                                    font-family: $webl;
+                                    display: block;
+                                    font-size: 18px;
+                                    line-height: 30px;
+                                    text-align: center;
+                                    transition: none!important;
+                                    -webkit-transition: none!important;
+                                    -o-transition: none !important;
+                                    padding: 0;
+                                    i {
+                                        left: 0;
+                                        font-size: 13px;
+                                        margin-left: 15px;
+                                        position: relative;
+                                        @include transition(all .3s ease);
+                                    }
+                                    &:hover{
+                                        i{
+                                            left: 5px;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        &.rememberMe {
+                            float: left;
+                            width: auto;
+                            position: relative;
+                            z-index: 1;
+                            font-style: italic;
+                            font-family: $light;
+                            white-space: nowrap;
+                            cursor: pointer;
+                            .sStylerMainWrp {
+                                float: left;
+                            }
+                            .cStyler {
+                                width: 14px;
+                                height: 14px;
+                                border: 1px solid #C7C8CA;
+                                position: relative;
+                                display: inline-block;
+                                margin-right: 5px;
+                                top: -1px;
+                                &.checked {
+                                    background: #171d2f;
+                                    border-color: #171d2f;
+                                    &:after {
+                                        font-family: 'icomoon';
+                                        content: '\e908';
+                                        font-size: 9px;
+                                        color: #fff;
+                                        width: 10px;
+                                        height: 10px;
+                                        position: absolute;
+                                        top: 2px;
+                                        right: 2px;
+                                    }
+                                }
+                            }
+                        }
+                        &.forgetPass {
+                            float: right;
+                            width: auto;
+                            position: relative;
+                            z-index: 1;
+                        }
+                    }
+                    .seperator {
+                        span{
+                            font-size: 15px;
+                            font-family: $light;
+                            padding: 10px 0 13px 0;
+                            text-align: center;
+                            display: block;
+                        }
+                    }
+                }
+            }
+            .kutuUyeGiris_profilFoto {
+                display: none;
+            }
+            .ems-user-pages{
+                padding:15px 0px 0px 0px;
+                @media screen and (min-width: $breakpointXSM){
+                    @include transition(all 0.3s ease);
+                    opacity: 0;
+                    @include setTransform(translateY(20px));
+                }
+                > div {
+                    a{
+                        display: inline-block;
+                        padding:10px 0;
+                        font-size: 16px;
+                        font-family: $light;
+                        &.btnKutuLogout{
+                            padding-top: 18px;
+                            padding-bottom: 18px;
+                            margin-top: 20px;
+                        }
+                    }
+                }               
+            }
+        }
+    }
+    &-social {
+        text-align: center; 
+        padding: 13px 0 35px 0;
+            .uyeGirisFacebookConnectKutu, .uyeGirisGoogleConnectKutu {width: 44px; display: inline-block; margin: 0 8px;}
+            /*a.btnFacebookLoginKutu, a.btnGoogleLoginKutu {
+               border-radius: 100%;
+               width: 44px;
+               height: 44px;
+               display: inline-block;
+               padding: 12px 10px;
+               background: #C7C8CA;
+               &:hover {
+                opacity: .8;
+               }
+               i {float: none; font-size: 20px;}
+            }*/
+    }
+    &-footer{ display: none; }
+}
+
+.vailLogin{z-index:15;}
+
+//////////////////////////////////
+body.mini-login-ready{
+    /*overflow: hidden;*/
+}
+
+body.ems-logoff{
+    .mod-mini-login{
+        &-body{
+            .sub.logoff{
+                display: block;
+            }
+        }
+    }
+}
+body.ems-login{
+    .mod-mini-login{
+        &-body{
+            .sub.login{
+                display: block;
+            }
+        }
+    }
+}
+
+//////////////////////////////////
+body.ems-logoff.mini-login-ready{
+    .mod-mini-login{
+        &-body{
+            .sub.logoff{
+                display: block;
+            }
+        }
+    }
+}
+body {
+    &.ems-login.mini-login-ready{
+        .mod-mini-login{
+            &-body{
+                .sub.login{
+                    display: block;
+                }
+            }
+        }
+    }
+    &.ems-login {
+        .mod-mini-login {
+            &-body{
+                display: none !important; 
+            }
+        }  
+    }
+}
+
+@media only screen and (min-width: 850px) and ( max-width: 1200px) {
+    .mod-mini-login-header{/*padding-left: 10px; padding-right: 10px;*/}
+}
+
+@media screen and (max-width: $breakpointXSM){
+    .mod-mini-login{
+        &-inner {
+            .btnKutuLogout {
+                padding: 0;
+            }
+        }
+        &-header{
+            text-align: center;
+            padding: 0px 25px;
+            > span[id$="lbhKUTU_HESABIM"]{
+                &:empty{display: none;}
+               /* color: #fff;
+                display: block;
+                max-width: 70px;
+                overflow: hidden;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+                position: relative;*/
+                span {line-height: 1;}
+            }
+            > span[id$="lbfkutuUyeGiris1"]{
+                .mobile-element{position: relative; top: -2px; color: #fff; margin-left: 10px;}
+                .icon-ico_member, .icon-ico_member:before{
+                    font-size: 18px;
+                }
+                .icon-ico_member:before{color:#fff;}
+            }
+        }
+        &-body{
+           position: fixed;
+           top: 0;
+           left: 0;
+           z-index: 10;
+           width: 100%;
+           height: 100%;
+           @include setTransform(translateX(-100%));
+           @include transition(transform 333ms ease-in-out);
+           will-change: transform;
+           opacity: 0;
+           visibility: hidden;
+           overflow-y: auto;
+           display: none;
+            .sub{
+                .ems-message{margin-top: 0;}
+                .sub-title{
+                    text-align: center;
+                    .mini-login-close{
+                        right: 0px;
+                        top: 5px;
+                        border:1px solid #000;
+                        height: 30px;
+                        width: 30px;
+                        i { 
+                            line-height: 30px; 
+                            &:before {
+                                color: #000;
+                            }
+                        }
+                        
+                    }
+                }
+                .ems-user-info{
+                    position: relative;
+                    display: block;
+                    font-size: 14px;
+                    color: #fff;
+                    .member-account{display: none;}
+                    .mobile-user-popup-close{
+                        cursor: pointer;
+                        position: absolute;
+                        left: 8px;
+                        width: 40px;
+                        text-align: center;
+                        padding: 5px;
+                        top: 21px;
+                        height: 30px;
+                    }
+                    span[id$="lbfUYE_SAYIN"]{
+                        display: block;
+                        position: relative;
+                        padding: 20px 40px;
+                        color: $lDark;
+                        border-bottom: 1px solid $border;
+                        text-align: center;
+                        span{
+                            font-size: 18px;
+                            font-family: $medium;
+                            display: block;
+                            max-width: 95%;
+                            margin-left: auto;
+                            margin-right: auto;
+                            overflow: hidden;
+                            white-space: nowrap;
+                            text-overflow: ellipsis;
+                        }
+                        .mini-login-close{
+                            position: absolute;
+                            top: -12px;
+                            right: -24px;
+                            width: 24px;
+                            height: 24px;
+                            margin-top: -11px;
+                            z-index: 1;
+                            text-align: center;
+                            cursor: pointer;
+                            i{line-height: 24px;}
+                            i, i:before{
+                                font-size: 10px;
+                                color: $gray3;
+                            }
+                        }
+                    }
+                }
+                .ems-user-pages{
+                    padding-left: 20px;
+                    padding-right: 20px;
+                    > div a{
+                        padding-left: 5px;
+                        padding-right: 5px;
+                    }
+                }
+            }
+        }
+    }
+
+    .mini-login-ready{
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        .mod-mini-login-body{
+            opacity: 1;
+            visibility: visible;
+            display: block;
+            .ems-form {
+                transform: translateY(-50%);
+                top: 50%;
+                position: absolute;
+                padding: 26px;
+                width: 100%;
+            }
+        }
+    }
+    .mini-login-animate{
+        .mod-mini-login-body{
+            @include setTransform(translateX(0));
+        }
+    }
+}
