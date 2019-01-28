@@ -665,6 +665,11 @@ ul.emosInfinite {
                 height: 100%;
                 top: 0;
                 left: 0;
+                a {
+                    span[id$="lbfDetay"] {
+                        display: none; 
+                    }
+                }
                 ul {
                     li {
                         display: none;
