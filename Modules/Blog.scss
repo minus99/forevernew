@@ -198,7 +198,7 @@
   }
   /*FOREVER NEW BLOG DETAY*/
 
-  @media screen and (max-width: $breakpointXSM){
+  @media screen and (max-width: $breakpointXSM){ 
     .blog-page .blog-header-navbar-wrapper {padding: 0 20px;}
     .blog-page .blog-list {padding: 0;}
     .blog-page .blog-list .icerikListe_Tablo tbody tr {width: 100%; flex-basis: 100%; padding: 0 15px 15px 15px;}
