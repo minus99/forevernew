@@ -673,7 +673,7 @@ ul.emosInfinite {
                 ul {
                     li {
                         display: none;
-                        &.active {
+                        &.active { 
                             -webkit-animation-name: fade-in;
                             animation-name: fade-in;
                             -webkit-animation-duration: 1s;
