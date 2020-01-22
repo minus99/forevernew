@@ -87,11 +87,11 @@
                 /*position: relative;*/
                 display: none;
                 span{
-                    font-family: $webr;
+                    font-family: $regular;
                     font-size: 20px;
                     display: inline-block;
                     p.sepetAdet {
-                        font-family: $light;
+                        font-family: $regular;
                         font-size: 11px;
                         b span {
                             font-size: 11px;
@@ -126,7 +126,7 @@
                         font-size: 55px;
                     }
                     .cart-empty-text{
-                        font-family: $webr;
+                        font-family: $regular;
                         font-size: 20px;
                         text-align: center;
                         margin-top: 0;
@@ -134,7 +134,7 @@
                         padding-bottom: 10px;
                     }
                     > span{
-                        font-family: $light;
+                        font-family: $regular;
                         font-size: 11px;
                         padding: 5px 0px 30px 0px;
                         display: inline-block;
@@ -249,7 +249,7 @@
                             display: block;
                             text-align: center;
                             i{line-height: 25px;}
-                            i:before{font-size: 10px; color: #000;}
+                            i:before{font-size: 10px; color: $dark;}
                             span{display: none;}
                         }
                     }
@@ -260,8 +260,8 @@
                         line-height: 17px;
                         overflow: hidden;
                         font-size: 14px;
-                        font-family: $light;
-                        color: #333;
+                        font-family: $regular;
+                        color: $black;
                     }
                     .cart-prd-price{
                         font-family: $medium;
@@ -284,7 +284,7 @@
                     }
                     span{
                         text-align:left;
-                        font-family: $light;
+                        font-family: $regular;
                         font-size: 10px;
                         color: #989898;
                         &:before {
@@ -311,7 +311,7 @@
                 justify-content: space-between;
                 padding: 20px 0;
                 > span{
-                    display: block;
+                    display: block; 
                     font-family: $medium;
                     font-size: 16px;
                     text-align: left;
@@ -326,11 +326,11 @@
                     display: block;
                     text-align: center;
                     padding: 13px 10px;
-                    background: #000;
+                    background: $dark;
 
                     &:hover{background-color: #1a1a1a;}
                     span{
-                        font-family: "webl";
+                        //font-family: "webl";
                         font-size: 12px;
                         color: #fff;
                     }
@@ -400,8 +400,8 @@
             will-change: width;
             -webkit-transition: width ease .3s;
             transition: width ease .3s;
-            background: -webkit-gradient(linear,left top,right top,from(#f9f0f1),to(#E9CDD0));
-            background: linear-gradient(to right,#f9f0f1,#E9CDD0);
+            background: -webkit-gradient(linear,left top,right top,from(#f5efeb),to(#C09C83));
+            background: linear-gradient(to right,#f5efeb,#C09C83);
             -webkit-box-shadow: inset 0 1px 3px rgba(0,0,0,.15);
             box-shadow: inset 0 1px 3px rgba(0,0,0,.15);
             height: 8px;

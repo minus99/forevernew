@@ -84,12 +84,12 @@
     &-text {
         line-height: 1.5;
         font-size: 15px;
-        font-family: $light;
+        font-family: $regular;
     }
     a {
         border-radius: 4px;
-        border: 1px solid #000000;
-        color: #000000;
+        border: 1px solid $dark;
+        color: $dark;
         margin: 10px 7px;
         min-width: 90px;
         width: auto;
@@ -103,7 +103,7 @@
             margin-right: 7px;
         }
         &:hover {
-            background-color: #000000;
+            background-color: $dark;
             color: #ffffff;
         }
     }
@@ -211,7 +211,7 @@
                     display: block;
                     padding-bottom: 15px;
                     font-size: 24px;
-                    font-family: $webr;
+                    font-family: $regular;
                 }
             }
             .ems-page-content-text{
@@ -348,7 +348,7 @@
                         pointer-events: none;
                         border: 0;
                         span {
-                            font-family: $playr; 
+                            font-family: $medium; 
                             font-size: 20px;
                         }
                     }
@@ -366,7 +366,7 @@
                 line-height: normal;
                 display: block;
                 span {
-                    font-family: $webr !important; 
+                    font-family: $regular !important; 
                     font-size: 30px !important; 
                     padding-bottom: 0 !important; 
                 }
@@ -375,7 +375,7 @@
                 font-size: 12px;
                 margin: 20px 0; 
                 line-height: 16px;
-                b {color: #000; font-size: 14px; display: block;}
+                b {color: $dark; font-size: 14px; display: block;}
             }
         }
         .pageDefault {
@@ -471,7 +471,7 @@
                     display: block;
                     padding-bottom: 30px;
                     font-size: 30px;
-                    font-family: $webr;
+                    font-family: $regular;
                 }
             }
             .page-top-desc {
@@ -532,7 +532,7 @@
                                                 font-family: 'icomoon';
                                                 content: '\e908';
                                                 font-size: 9px;
-                                                color: #000;
+                                                color: $dark;
                                                 width: 8px;
                                                 height: 8px;
                                                 position: absolute;
@@ -788,7 +788,7 @@
                 margin: 0 0 15px 0;
             }
             span {
-                font-family: $webr;
+                font-family: $regular;
                 font-size: 24px;
                 line-height: 26px;
                 margin: 0 0 15px 0;
@@ -799,7 +799,7 @@
                 margin-bottom: 15px;
             }
             .emphasize {
-                font-family: $webl;
+                font-family: $regular;
                 font-size: 18px;
                 line-height: 25px;
                 margin-bottom: 8px;
@@ -812,7 +812,7 @@
                 margin-bottom: 20px;
                 font-size: 16px;
                 padding-bottom: 20px; 
-                font-family: $webl;
+                font-family: $regular;
             }
             ul {
                 display: grid;
@@ -1267,7 +1267,7 @@
                     margin-bottom: 15px;
                 }
                 > span {
-                    font-family: $playr;
+                    font-family: $medium;
                     font-size: 40px;
                     line-height: 45px;
                     margin-top: 30px;
@@ -1284,7 +1284,7 @@
     }
     &-content {
         .title {
-            font-family: $webl;
+            font-family: $regular;
             font-size: 22px;
             padding-bottom: 40px;
             display: block;
@@ -1310,7 +1310,7 @@
                 }
                 p {
                     margin: 0;
-                    font-family: $light;
+                    font-family: $regular;
                     line-height: 1.25rem;
                 }
             }
@@ -1574,7 +1574,7 @@
 
 .pageSitemap>div>ul>li>ul>li>a {
     font-size: 14px;
-    color: #000;
+    color: $dark;
     font-weight: bold
 }
 

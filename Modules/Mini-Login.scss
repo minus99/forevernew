@@ -179,9 +179,9 @@
         display: flex;
         .btnKutuLogout {
             background: none;
-            color: #000;
+            color: $dark;
             padding:14px 0px 14px 15px;
-            font-family: $light;
+            font-family: $regular;
             &:hover{
                 background: none;
             }
@@ -195,7 +195,7 @@
         position: relative;
         > span[id$="lbhKUTU_HESABIM"]{
             display: inline-block;
-            font-family: $light;
+            font-family: $regular;
             font-size: 14px;
             /*max-width: 70px;
             text-overflow: ellipsis;*/
@@ -222,7 +222,7 @@
             span {
                 display: inline-block;
                 vertical-align: middle;
-                font-family: $light;
+                font-family: $regular;
             }
             span{ /*display: none;*/}
             &:empty{display: none;}
@@ -267,7 +267,7 @@
                     display: inline-block;
                     font-size: 20px;
                     color: $lDark;
-                    font-family: $webl;
+                    font-family: $regular;
                     margin-bottom: 15px;
                     /*&:before{
                         font-family: 'icomoon';
@@ -280,7 +280,7 @@
                 }
                 p {
                     font-size: 15px;
-                    font-family: $light;
+                    font-family: $regular;
                     padding: 10px 0 0;
                     margin: 0;
                 }
@@ -327,7 +327,7 @@
                         #lnkSifremiUnuttum{
                             display: inline-block;
                             span{
-                                font-family: $light; 
+                                font-family: $regular; 
                                 font-style: italic;
                             }
                             &:hover{
@@ -337,11 +337,11 @@
                         &-submit{
                             @include flexDirection(column);
                             .btnKutuLogin{
-                                background: #000;
+                                background: $dark;
                                 color: #fff;
                                 margin: 20px 0;
                                 &:hover {
-                                    background: #333;
+                                    background: $black;
                                 }
                             }
                             .pageLogin_btnFacebookLoginKutu{
@@ -354,8 +354,8 @@
                                 display: block;
                                 margin-top: 20px;
                                 a{
-                                    color: #000;
-                                    font-family: $webl;
+                                    color: $dark;
+                                    font-family: $regular;
                                     display: block;
                                     font-size: 18px;
                                     line-height: 30px;
@@ -385,7 +385,7 @@
                             position: relative;
                             z-index: 1;
                             font-style: italic;
-                            font-family: $light;
+                            font-family: $regular;
                             white-space: nowrap;
                             cursor: pointer;
                             .sStylerMainWrp {
@@ -426,7 +426,7 @@
                     .seperator {
                         span{
                             font-size: 15px;
-                            font-family: $light;
+                            font-family: $regular;
                             padding: 10px 0 13px 0;
                             text-align: center;
                             display: block;
@@ -449,7 +449,7 @@
                         display: inline-block;
                         padding:10px 0;
                         font-size: 16px;
-                        font-family: $light;
+                        font-family: $regular;
                         &.btnKutuLogout{
                             padding-top: 18px;
                             padding-bottom: 18px;
@@ -589,13 +589,13 @@ body {
                     .mini-login-close{
                         right: 0px;
                         top: 5px;
-                        border:1px solid #000;
+                        border:1px solid $dark;
                         height: 30px;
                         width: 30px;
                         i { 
                             line-height: 30px; 
                             &:before {
-                                color: #000;
+                                color: $dark;
                             }
                         }
                         

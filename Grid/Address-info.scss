@@ -6,7 +6,7 @@
                 .ems-message{
                     margin-bottom: 20px;
                 }
-                .ems-form{
+                .ems-form{ 
                     .ems-form-obj{
                         &.uye-tarih {
                             padding-right: 40px;
@@ -16,7 +16,7 @@
                                 font-family: 'icomoon';
                                 font-size: 31px;
                                 color: $gray3;
-                                position: absolute;
+                                position: absolute;  
                                 right: 0;
 
                             }
@@ -303,7 +303,7 @@
                     max-width: none;
                     margin: 0;
                     .btnAdresEkle{
-                        background: #000;
+                        background: $dark;
                         display: inline-block;
                         margin-top: 30px;
                         padding: 15px 30px;

@@ -25,7 +25,7 @@
                     font-weight: normal;
                     font-size: 16px;
                     font-family: $bold;
-                    color: #000; 
+                    color: $dark; 
                     &:before {
                         color: #FFF;
                         background-color: $green;
@@ -62,7 +62,7 @@
                     &:before {
                         background-color: #C7C8CA; 
                         content: counter(auto-increment-numbers);
-                        font-family: $light; 
+                        font-family: $regular; 
                     }
                 }
             }
@@ -70,11 +70,11 @@
         &.tabBtnSelectedDefault {
             span {
                 strong {
-                    color: #000;
+                    color: $dark;
                     &:before {
-                        background: #000;
+                        background: $dark;
                         content: counter(auto-increment-numbers);
-                        font-family: $light;
+                        font-family: $regular;
                     }
                 }
             }
@@ -116,7 +116,7 @@
 }
 
 .ems-cart-warning-1{
-    background: #e7bbb4;
+    background: $sunflower;
     padding: 10px 20px;
     width: 100%;
     margin-left: auto;
@@ -175,14 +175,14 @@
                 bottom: 0;
                 width: 100%;
                 height: 0;
-                background: #E7BBB4;
+                background: $sunflower;
                 @include transition (all .2s ease);
             }
             &.selected {
-                color: #E7BBB4 !important;
+                color: $sunflower !important;
                 &:after {
                     height: 3px;
-                    background: #E7BBB4 !important;
+                    background: $sunflower !important;
                 }
             }
             &:hover {
@@ -339,10 +339,10 @@
                 position: relative;
                 display: inline-block;
                 padding: 15px 10px;
-                font-family: $webl;
+                font-family: $regular;
                 font-size: 11px;
-                color: #000;
-                border: 1px solid #000;
+                color: $dark;
+                border: 1px solid $dark;
                 text-align: center;
                 font-weight: normal;
                 width: 100%;
@@ -613,7 +613,7 @@
         }
         p {
             font-size: 36px;
-            font-family: $playr; 
+            font-family: $medium; 
             margin: 40px 0 0 0;
         }
         .g-home{
@@ -951,7 +951,7 @@
                 .ems-cart-summary-title{
                     display: block;
                     text-align: left;
-                    font-family: $webr;
+                    font-family: $regular;
                     font-size: 24px;
                     line-height: 26px;
                     padding-bottom: 40px;
@@ -1021,12 +1021,12 @@
                             padding: 10px 10px;
                             background: none;
                             border: 1px solid #C7C8CA;
-                            color: #000;
+                            color: $dark;
                             letter-spacing: 0.5px;
                             &:hover {
-                                background: #000;
+                                background: $dark;
                
-                                border-color: #000;
+                                border-color: $dark;
                                 span {
                                     color: #fff;
                                 }
@@ -1241,6 +1241,16 @@
         .cart-section-right .ems-cart-summary .ems-cart-summary-coupon,
         .cart-section-right .ems-cart-summary .ems-cart-summarybottom .next{display: none;}
 
+        .kurumsal {
+            .tcCheck, .tcCheck-2 {
+                display: none;  
+            }
+        }
+        .bireysel {
+            .vergNoCheck, .vergCheck {
+                display: none;
+            }
+        }
         .ems-page-default{ 
             max-width: 700px;
             .ems-page-default {    
@@ -1368,7 +1378,7 @@
                             &.emos_selected { 
                                 &:before{
                                     content: '\e908';
-                                    background: #000;
+                                    background: $dark;
                                     border-color: #171d2f;
                                 }
                             }
@@ -1386,8 +1396,8 @@
                             span {font-size: 12px;}
                             i{ line-height: 24px; display: none;}
                             &:hover {
-                                background: #000 !important;
-                                border-color: #000;
+                                background: $dark !important;
+                                border-color: $dark;
                                 span {
                                     color: #fff;
                                 }
@@ -1409,8 +1419,8 @@
                                 display: none;
                             }
                             &:hover {
-                                border-color: #000;
-                                background: #000 !important;
+                                border-color: $dark;
+                                background: $dark !important;
                                 color: #fff;
                             }
                         }
@@ -1644,12 +1654,12 @@
                                         display: inline-block;
                                         cursor: pointer;
                                         &.checked{
-                                            border-color: #000;
+                                            border-color: $dark;
                                             &:after {
                                                 font-family: 'icomoon';
                                                 content: '\e908';
                                                 font-size: 10px;
-                                                color: #000;
+                                                color: $dark;
                                                 width: 10px;
                                                 height: 10px;
                                                 position: absolute;
@@ -1773,14 +1783,14 @@
                                             bottom: 0;
                                             width: 100%;
                                             height: 0;
-                                            background: #E7BBB4;
+                                            background: $sunflower;
                                             @include transition(all 0.1s ease);
                                         }
                                         &.emos_selected{
-                                            color: #E7BBB4 !important;
+                                            color: $sunflower !important;
                                             &:after{
                                                 height: 3px;
-                                                background: #E7BBB4 !important;
+                                                background: $sunflower !important;
                                             }
                                         }
                                         &:hover {
@@ -1873,14 +1883,14 @@
                                     bottom: 0;
                                     width: 100%;
                                     height: 0;
-                                    background: #E7BBB4;
+                                    background: $sunflower;
                                     @include transition (all .1s ease); 
                                 }
                                 &.emos_selected {
-                                    color: #E7BBB4 !important;
+                                    color: $sunflower !important;
                                     &:after{
                                         height: 3px;
-                                        background: #E7BBB4 !important; 
+                                        background: $sunflower !important; 
                                     }
                                 }
                                 &:hover {
@@ -2640,7 +2650,7 @@
             }
         }
         .sonucTitle {
-            font-family: $webr;
+            font-family: $regular;
             font-size: 36px;
             color: $lDark;
             margin-top: 20px;
@@ -2678,9 +2688,9 @@
                 display: inline-block;
                 padding: 10px;
                 font-size: 14px;
-                color: #000;
+                color: $dark;
                 font-weight: normal;
-                border: 1px solid #000;
+                border: 1px solid $dark;
                 padding: 20px;
                 width: 100%;
                 max-width: 500px;
@@ -2697,7 +2707,7 @@
             }
             .btnOdemeBilgiDon{
                 background: none;
-                color: #000;
+                color: $dark;
                 text-transform: uppercase;
                 text-decoration: underline;
             }
@@ -2975,7 +2985,7 @@
                     }
                     .ems-grid-name{
                         font-size: 18px;
-                        font-family: $light;
+                        font-family: $regular;
                         padding-right: 25px;
                         order: 1;
                         a {
@@ -3196,7 +3206,7 @@
                             content: '';
                             width: 100%;
                             height: 3px;
-                            background:#e7bbb4;
+                            background:$sunflower;
                             position: absolute;
                             bottom: 0;
                             left: 0;    
@@ -3531,7 +3541,7 @@
                             width:100%;
                             max-width: 180px; 
                             padding: 13px;
-                            border: 1px solid #000;
+                            border: 1px solid $dark;
                             border-radius: 2px;
                             display: inline-block;
                             line-height: 20px;
@@ -3545,7 +3555,7 @@
                         }
                         ul {
                             position: absolute;
-                            border: 1px solid #000;
+                            border: 1px solid $dark;
                             width: 100%;
                             background: #fff;
                             position: absolute;

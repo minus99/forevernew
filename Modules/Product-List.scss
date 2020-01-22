@@ -173,7 +173,7 @@
             .sStylerMainWrp {
                 color: #C7C8CA;
                 font-size: 13px;
-                font-family: $light;
+                font-family: $regular;
                 border: 1px solid #C7C8CA;
                 height: auto;
                 .sStylerWrp {
@@ -182,7 +182,7 @@
                     padding: 10px 40px 8px 25px !important;
                     font-size: 13px !important;
                     color: #C7C8CA !important;
-                    font-family: $light !important;
+                    font-family: $regular !important;
                     line-height: 18px !important;
                 }
             }
@@ -192,7 +192,7 @@
             padding-left: 10px;
             border-left: 1px solid #DADADA;
             font-size: 16px;
-            font-family: $light;
+            font-family: $regular;
             display: none;
             span {
                 padding-right: 5px;
@@ -228,7 +228,7 @@
             max-width: 900px;
             font-size: 14px;
             text-align: center;
-            font-family: $light;
+            font-family: $regular;
             line-height: 20px;
             padding-bottom: 30px; 
         }
@@ -522,6 +522,84 @@ ul.emosInfinite {
             width: 100%;
             /*max-width: 310px;*/
         }
+        &-alternate{
+            overflow: hidden;
+            .ems-prd-inner{
+                display: table;
+                width: 100%;
+                height: 100%;
+                a{
+                    display: table;
+                    width: 100%;
+                    height: 100%;
+                    position: relative;
+                    .cover{
+                        background-size: cover !important;
+                        background-position: center center !important;
+                        height: 100%;
+                        width: 100%;
+                        display: table;
+                        
+                    }
+                    .text{
+                        position: absolute;
+                        bottom: 0px;
+                        left: 0;
+                        width: 100%;
+                        padding: 0 10px;
+                        text-align: center;
+                        //@include setTransform(translateY(-50%));
+                        color: #fff;
+                        background: -moz-linear-gradient(top, rgba(0,0,0,0) 0%, rgba(0,0,0,0) 1%, rgba(0,0,0,0.65) 100%);
+                        background: -webkit-linear-gradient(top, rgba(0,0,0,0) 0%,rgba(0,0,0,0) 1%,rgba(0,0,0,0.65) 100%);
+                        background: linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(0,0,0,0) 1%,rgba(0,0,0,0.65) 100%);
+                        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#a6000000',GradientType=0 );
+                        span{
+                            display: block;
+                            &.regular-title {
+                                padding: 5px 0 10px 0 !important;
+                            }
+                            &.link-btn{
+                                display: inline-block;
+                                margin-top: 5px;
+                                margin-bottom: 20px;
+                                font-size: 12px;
+                                padding: 5px 10px;
+                                border: 1px solid #fff;
+                                font-family: $regular;
+                                line-height: 20px;
+                                i{
+                                    &:before {
+                                        font-size: 8px;
+                                    }
+                                }
+                                &:hover {
+                                    background: #fff;
+                                    color: $dark;
+                                    i {
+                                        &:before {
+                                            color: $dark;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        .regular-title{
+                            font-size: 14px;
+                            padding: 10px 0;
+                        }
+                        .bold-title{
+                            font-family: $bold;
+                            letter-spacing: -0.3px;
+                            font-size: 24px;
+                            font-size: calc(14px + .5vw);
+                            margin-top: 20px;
+                            
+                        }
+                    }
+                }
+            }
+        }
         &-mask{
             position: relative;
             overflow: hidden;
@@ -631,8 +709,10 @@ ul.emosInfinite {
                 display: block !important;
                 background: #fff;
                 span, small{
-                    color: #55BEE6;
-                    font-size: 15px;
+                    color: $dGray;
+                    font-size: 14px;
+                    text-transform: lowercase;
+                    font-family: $medium;
                 }
             }
         }
@@ -695,7 +775,7 @@ ul.emosInfinite {
            padding: 5px 10px;
            i, i:before{
             font-size: 18px;
-            color: #000;
+            color: $dark;
             }
         }
         &-favorites{
@@ -719,7 +799,7 @@ ul.emosInfinite {
                             font-family: inherit;
                             line-height: 20px;
                             height: 20px;
-                            color: #000;
+                            color: $dark;
                             i, i:before{
                                 font-size: 20px;
                             }
@@ -802,7 +882,7 @@ ul.emosInfinite {
                             height: 100%;
                             z-index: 1;
                             @include flex();
-                            justify-content: center;
+                            /*justify-content: center;*/
                             -webkit-transition-property: -webkit-transform;
                             -moz-transition-property: -moz-transform;
                             -o-transition-property: -o-transform;
@@ -821,16 +901,17 @@ ul.emosInfinite {
                                 position: relative;
                                 text-align: center;
                                 padding:0 4px;
+                                width: auto !important;
                                 a{
                                     display: inline-block;
-                                    width: 25px;
-                                    height: 25px;
+                                    width: 50px;
+                                    height: 50px;
                                     padding: 5px;
                                     overflow: hidden;
                                     border-radius: 100%;
                                     img {
-                                        width: 15px;
-                                        height: 15px;
+                                        width: 40px;
+                                        height: 40px;
                                         overflow: hidden;
                                         border-radius: 100%;
                                     }
@@ -885,8 +966,7 @@ ul.emosInfinite {
                 vertical-align: middle;
                 line-height: 20px;
                 font-size: 16px;
-                font-family: $light;
-                font-weight: bold;
+                font-family: $regular;
                 &:empty{
                     display: none;
                 }
@@ -898,7 +978,7 @@ ul.emosInfinite {
             &-first{
                 font-size: 14px;
                 font-family: $regular;
-                color: $lDark; 
+                color: $dGray; 
                 text-decoration: line-through; 
                 > div{
                     margin-right: 10px;
@@ -907,7 +987,6 @@ ul.emosInfinite {
             &-selling{
                 font-size: 14px;
                 font-family: $medium;
-                
                 color: $lDark; 
             }
         }
@@ -929,7 +1008,7 @@ ul.emosInfinite {
         &.indirimli {
             .ems-prd-price{
                 &-selling{
-                    color: #DF1B50;
+                    color: $lDark;
                 }
             }
         }
@@ -1029,7 +1108,7 @@ ul.emosInfinite {
                 padding: 0 20px 20px 20px;
                 width: 100%;
                 .title{
-                    font-family: $webr;
+                    font-family: $regular;
                     font-size: 26px;
                     line-height: 36px;
                     margin-bottom: 10px;
@@ -1074,7 +1153,7 @@ ul.emosInfinite {
             display: block;
         }
         .title{
-            font-family: $webr;
+            font-family: $regular;
             font-size: 26px;
             line-height: 36px;
             margin-bottom: 10px;
@@ -1247,7 +1326,7 @@ ul.emosInfinite {
                             i{line-height: 24px;}
                             i, i:before{
                                 font-size: 12px;
-                                color: #000;
+                                color: $dark;
                             }
                         }
                     }
@@ -1526,7 +1605,7 @@ ul.emosInfinite {
         }
         &.tekli {
             .ems-page-list .ems-prd-list .emosInfinite {
-                padding: 10px 50px 0 50px;
+                padding: 10px 10px 0 10px;
             }
         }
     }

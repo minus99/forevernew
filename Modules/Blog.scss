@@ -11,9 +11,9 @@
   .blog-page .blog-header-navbar-wrapper .blog-header-navbar .blog-menu .nav-main > ul > li > ul.sub-nav > li > ul > li {padding: 0;}
   .blog-page .blog-header-navbar-wrapper .blog-header-navbar .blog-menu .nav-main > ul > li > ul.sub-nav > li > ul > li > a {padding: 10px 15px; font-family: $medium;}
   .blog-page .blog-header-navbar-wrapper .blog-header-navbar .blog-menu .nav-main > ul > li > ul.sub-nav > li > ul > li > a:hover {opacity: .8;}
-  .blog-page .blog-header-navbar-wrapper .blog-header-navbar .blog-menu .nav-main > ul > li > a {color: #000; font-size: 15px; font-family: $regular; text-transform: uppercase; letter-spacing: 1px; line-height: 25px; padding: 6px 15px 5px 15px;}
+  .blog-page .blog-header-navbar-wrapper .blog-header-navbar .blog-menu .nav-main > ul > li > a {color: $dark; font-size: 15px; font-family: $regular; text-transform: uppercase; letter-spacing: 1px; line-height: 25px; padding: 6px 15px 5px 15px;}
   /*.blog-page .blog-header-navbar-wrapper .blog-header-navbar .blog-menu > li {display:  inline-block;text-align:  center;}
-  .blog-page .blog-header-navbar-wrapper .blog-header-navbar .blog-menu > li > a {color: #000;font-size:  15px; font-family: $regular; text-transform: uppercase; letter-spacing: 1px; line-height: 32px; padding: 0 15px;}
+  .blog-page .blog-header-navbar-wrapper .blog-header-navbar .blog-menu > li > a {color: $dark;font-size:  15px; font-family: $regular; text-transform: uppercase; letter-spacing: 1px; line-height: 32px; padding: 0 15px;}
   .blog-page .blog-header-navbar-wrapper .blog-header-navbar .blog-menu > li > a:hover, 
   .blog-page .blog-header-navbar-wrapper .blog-header-navbar .blog-menu > li > a.selected {}*/
   .blog-page .blog-header-navbar-wrapper .blog-menu-selecbox {display: none;}
@@ -38,19 +38,19 @@
   .blog-page .blog-list .icerikListe_Tablo tbody tr:nth-child(3) td .blog-post-item .item-text-wrap {padding: 20px;}
   .blog-page .blog-list .icerikListe_Tablo tbody tr:nth-child(3) td .blog-post-item .item-text-wrap > div a.item-head {font-size: 27px;} 
 
-  .blog-page .blog-list .blogTitleKategoriAd {font-family: $playr; font-size: 45px; margin-bottom: 20px; text-align: center; display: block; line-height: normal;}
+  .blog-page .blog-list .blogTitleKategoriAd {font-family: $medium; font-size: 45px; margin-bottom: 20px; text-align: center; display: block; line-height: normal;}
   
   .blog-page .blog-list .blog-post-item {display:  block;position:  relative; background:#fff;}
   .blog-page .blog-list .blog-post-item .item-img {width:100%;display: block; background-size: cover; background-position: center; margin: 0 0 20px 0;}
   .blog-page .blog-list .blog-post-item .item-text-wrap {width:100%; max-width:700px; margin: 0 auto; padding: 20px; display: block;}
   .blog-page .blog-list .blog-post-item .item-text-wrap > div a {margin-bottom:  15px;}
-  .blog-page .blog-list .blog-post-item .item-text-wrap > div a.item-cat-text {color: #E7BBB4; font-family: $medium; margin: 0 0 15px; text-transform: uppercase; letter-spacing: 1.3px;} 
-  .blog-page .blog-list .blog-post-item .item-text-wrap > div a.item-head {font-size: 27px; font-family:$playr; display:  block;line-height:  30px; color:#000; letter-spacing: 1px;}
+  .blog-page .blog-list .blog-post-item .item-text-wrap > div a.item-cat-text {color: $sunflower; font-family: $medium; margin: 0 0 15px; text-transform: uppercase; letter-spacing: 1.3px;} 
+  .blog-page .blog-list .blog-post-item .item-text-wrap > div a.item-head {font-size: 27px; font-family:$medium; display:  block;line-height:  30px; color:$dark; letter-spacing: 1px;}
   .blog-page .blog-list .blog-post-item .item-text-wrap > div a.item-date {display: inline-block;text-align:  center;}
   .blog-page .blog-list .blog-post-item .item-text-wrap > div a.item-date > span {margin-right:3px;font-size:  12px; color:#ccc}
   .blog-page .blog-list .blog-post-item .item-text-wrap > div a.item-summary {line-height: 24px;font-size: 16px; display:block;}
-  .blog-page .blog-list .blog-post-item .item-text-wrap > div a.item-link {font-size:  14px; color: #000; font-family: $medium; letter-spacing: 1.3px; text-transform: uppercase; line-height: 1.3rem;}
-  .blog-page .blog-list .blog-post-item .item-text-wrap > div a.item-link:hover {color: #333;}
+  .blog-page .blog-list .blog-post-item .item-text-wrap > div a.item-link {font-size:  14px; color: $dark; font-family: $medium; letter-spacing: 1.3px; text-transform: uppercase; line-height: 1.3rem;}
+  .blog-page .blog-list .blog-post-item .item-text-wrap > div a.item-link:hover {color: $black;}
   .blog-page .blog-list .blog-post-item .item-text-wrap > div a.item-cat:empty {display: none;}
 
   .blog-page .blog-list-banner {text-align: center; margin-top: 20px;}
@@ -63,9 +63,9 @@
   /*blog new right*/
   .blog-page .blog-list .blog-right-list {display:  inline-block;width: 30%;max-width:  350px;}
   .blog-page .blog-list .blog-right-list .blog-right-cont {padding: 45px;background:  #fff; margin-bottom:30px;}
-  .blog-page .blog-list .blog-right-list .blog-right-cont span.h2 {display:  block;margin-bottom: 25px;color: #000;font-size:  23px;}
+  .blog-page .blog-list .blog-right-list .blog-right-cont span.h2 {display:  block;margin-bottom: 25px;color: $dark;font-size:  23px;}
   .blog-page .blog-list .blog-right-list .blog-right-cont .img img {background-size:  cover;background-position:  center;}
-  .blog-page .blog-list .blog-right-list .blog-right-cont .img a {background:  #000;position:  absolute;left: 50%;bottom: 20px;transform: translateX(-50%);display:  inline-block;max-width:  170px;width:  100%; text-align:  center;padding: 12px;color: #fff;font-size:  17px;}
+  .blog-page .blog-list .blog-right-list .blog-right-cont .img a {background:  $dark;position:  absolute;left: 50%;bottom: 20px;transform: translateX(-50%);display:  inline-block;max-width:  170px;width:  100%; text-align:  center;padding: 12px;color: #fff;font-size:  17px;}
   .blog-page .blog-list .blog-right-list .blog-right-cont .img {position:  relative;margin-bottom:  30px;}
   .blog-page .blog-list .blog-right-list .blog-right-cont span.text {font-size:  14px;color: #424242;font-weight: 600;line-height: 1.4;letter-spacing:1px;}
   .blog-page .urunPaging .urunPaging_pageNavigation .tumunuGoster {display:  none !important;}
@@ -103,35 +103,35 @@
   
   /*FOREVER NEW BLOG DETAY*/
   .blog-detail .bold{font-weight: 700 !important;}
-  .blog-detail .light{font-weight: 400 !important;}
+  .blog-detail .regular{font-weight: 400 !important;}
   .blog-detail .blog-detail-container {margin:  40px auto;position:  relative;}
   .blog-detail .sec-header a.hBack {position: absolute;left: 0; top: 10px; font-size:  14px; color: #ccc; border-radius: 3px;  border: 1px solid #ddd; padding: 5px 6px 4px 6px;}
-  .blog-detail .sec-header a.hBack:hover {color: #fff; background: #000; border-color: #000;}
-  .blog-detail .blog-detail-container h1 {font-size: 45px; font-family:$playr;display:block;text-align:  center;margin-bottom:20px; color:#000; padding: 0 80px;}
-  .blog-detail .blog-detail-container h2 {font-size: 24px; font-family:$playr; display:block; text-align:center;margin-bottom:20px; color:#000;}
+  .blog-detail .sec-header a.hBack:hover {color: #fff; background: $dark; border-color: $dark;}
+  .blog-detail .blog-detail-container h1 {font-size: 45px; font-family:$medium;display:block;text-align:  center;margin-bottom:20px; color:$dark; padding: 0 80px;}
+  .blog-detail .blog-detail-container h2 {font-size: 24px; font-family:$medium; display:block; text-align:center;margin-bottom:20px; color:$dark;}
   .blog-detail .sec-header h2 {margin-top:  20px;margin-bottom:  0;}
   .blog-detail .sec-header a.hBack i.icon-ico_arrow-left {font-size:10px; display: inline-block;vertical-align: middle;margin-right: 5px; float: left; position: relative; top: 3px;}
   .blog-detail .sec-header span {display:  block;text-align:  center;margin-bottom:  10px;font-weight:  700;font-size: 16px;}
-  .blog-detail .sec-header span.blogDateText {display:block; font-family: $light; font-size: 12px; font-weight: normal; text-transform: uppercase; color: #C7C8CA;}
+  .blog-detail .sec-header span.blogDateText {display:block; font-family: $regular; font-size: 12px; font-weight: normal; text-transform: uppercase; color: #C7C8CA;}
   .blog-detail span.blogDateText {display:  none;}
   .blog-detail span.blogDate {display:  none;}
   
-  .blog-detail .sec-share .share-head {margin-top: 60px;text-align:  center;font-size: 18px;color: #000;}
-  .blog-detail .sec-share .share-head:before {content: '';width: 50px;height:  1px;background: #000;display:  block;margin: 0 auto 30px auto;}
+  .blog-detail .sec-share .share-head {margin-top: 60px;text-align:  center;font-size: 18px;color: $dark;}
+  .blog-detail .sec-share .share-head:before {content: '';width: 50px;height:  1px;background: $dark;display:  block;margin: 0 auto 30px auto;}
   .blog-detail .sec-share .share-list {display: block;max-width: 120px;width: 100%;margin: 20px auto;}
   .blog-detail .sec-share .share-list > li {display:  inline-block;width:  calc(100% / 3);text-align:  center;}
   .blog-detail .sec-share .share-list > li a {background-size: 100% 100% !important;width:  100%;height:  20px;display:  block;}
-  .blog-detail .sec-share .share-list > li.facebook a {background:  url(http://forevernew.proj-e.com/images/frontend/facebook.svg);}
-  .blog-detail .sec-share .share-list > li.twitter a {background: url(http://forevernew.proj-e.com/images/frontend/twitter.svg);}
-  .blog-detail .sec-share .share-list > li.whatsapp a {background: url(http://forevernew.proj-e.com/images/frontend/whatsapp.svg);}
-  
+  .blog-detail .sec-share .share-list > li.facebook a {background:  url(http://markayok.com/images/frontend/facebook.svg);}
+  .blog-detail .sec-share .share-list > li.twitter a {background: url(http://markayok.com/images/frontend/twitter.svg);}
+  .blog-detail .sec-share .share-list > li.whatsapp a {background: url(http://markayok.com/images/frontend/whatsapp.svg);}
+   
   .blog-detail .sec-text {margin-bottom: 50px;}
   .blog-detail .sec-text .text-wrap {margin-top: 20px;display:  block; max-width: 700px; margin: 0 auto;} 
   .blog-detail .sec-text .text-wrap p {text-align: center; font-size:  16px; color: #231F20; line-height: 28px;}
   
   .blog-detail .sec-video .videoWrapper {display: block;margin: 60px auto 50px auto; max-width:1000px; position: relative;}
   .blog-detail .sec-video .videoWrapper:before {content: '\e921';
-    color: #fff; font-family: 'icomoon'; font-size: 20px; opacity: .9; position: absolute; top: 50%; padding: 8px 10px; background: #333; border-radius: 3px; left: 0; right: 0; margin-left: auto; margin-right: auto; width: 50px; text-align: center; z-index: 1; pointer-events: none; @include transition(opacity .4s ease); -webkit-transform: translateY(-50%); -ms-transform: translateY(-50%); transform: translateY(-50%);} 
+    color: #fff; font-family: 'icomoon'; font-size: 20px; opacity: .9; position: absolute; top: 50%; padding: 8px 10px; background: $black; border-radius: 3px; left: 0; right: 0; margin-left: auto; margin-right: auto; width: 50px; text-align: center; z-index: 1; pointer-events: none; @include transition(opacity .4s ease); -webkit-transform: translateY(-50%); -ms-transform: translateY(-50%); transform: translateY(-50%);} 
   .blog-detail .sec-video .videoWrapper:after {content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0, .5 ); pointer-events: none;  @include transition(opacity .4s ease);} 
   .blog-detail .sec-video .videoWrapper .videoCont {position:  relative;}
   .blog-detail .sec-video .videoWrapper .videoCont .videoArea {display:block;}  
@@ -147,7 +147,7 @@
   .blog-detail .sec-text-image {display:  flex;flex-wrap:  wrap;justify-content: space-between;align-items:  center;padding-top:  60px; position:relative;}
   .blog-detail .sec-text-image > div {width:  50%; padding: 0 40px;}
   .blog-detail .sec-text-image > div > img {width:  100%;}
-  .blog-detail .sec-text-image > div.text-wrap h2 {text-align:  center;font-size: 26px;color:  #000;margin-bottom:  20px;}
+  .blog-detail .sec-text-image > div.text-wrap h2 {text-align:  center;font-size: 26px;color:  $dark;margin-bottom:  20px;}
   .blog-detail .sec-text-image > div.text-wrap > * {font-size:  16px;text-align:  center;font-weight: 500;color: #231F20; line-height: 1.8;}
   .blog-detail .sec-text-image>div.text-wrap>a {position:  absolute;left:  0;bottom: 0;background:  #424242;color: #fff;font-weight:  400;padding:  15px 25px;}
   
@@ -160,9 +160,9 @@
   .blog-detail .sec-product .swiper-inner .product .prdPromosyon{display:none;}
   .blog-detail .sec-product .miss-opp-widget {border: none;}
   .blog-detail .buttons {display:block;padding-top:20px; text-align:center;}
-  .blog-detail .buttons a {background: #fff;border: 1px solid #000;color: #000;transition: all .4s ease; margin-right:5px; padding:15px 25px;display:inline-block;}
+  .blog-detail .buttons a {background: #fff;border: 1px solid $dark;color: $dark;transition: all .4s ease; margin-right:5px; padding:15px 25px;display:inline-block;}
   .blog-detail .buttons a:last-child{margin-right: 0;}
-  .blog-detail .buttons a:hover{background:#000;color:#fff;}
+  .blog-detail .buttons a:hover{background:$dark;color:#fff;}
   
   .blog-page .blog-list .icerikListePagingAlt {display:  block;margin-bottom:  30px;}
   .urunPaging_pageNavigation {text-align:  center;}

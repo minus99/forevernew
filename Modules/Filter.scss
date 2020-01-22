@@ -18,11 +18,11 @@
             > table{
                 > tbody{
                     > tr{
-                        border-bottom: 1px solid #C7C8CA;
                         > td{
                             &:empty{display:none;}
                             > .urunKiyaslamaOzellik_ozellik{
                                 padding: 0 12px;
+                                border-bottom: 1px solid #C7C8CA;
                             }
                             .urunKiyaslamaOzellik_ozellik{   
                                 .urunKiyaslamaOzellik_ozellikAd{
@@ -59,7 +59,7 @@
                                     .urunKiyaslamaOzellik_ozellikAd{
                                         &:before{
                                             display:block;
-                                        }
+                                        } 
                                     }
                                 }
                                 .urunKiyaslamaOzellik_ozellikIcerik{
@@ -81,13 +81,13 @@
                                             &:before{
                                                 font-size: 20px;
                                             }
-                                        }
+                                        } 
                                     }
                                     table{
                                         > tbody{
                                             >{
                                                 tr{
-                                                    display: table;
+                                                    display: table; 
                                                     > td{
                                                         width: 50%;
                                                         display: table-cell;
@@ -98,7 +98,7 @@
                                                             padding: 0px 0px 0px 20px;
                                                             margin-bottom: 10px;
                                                             position: relative;
-                                                            font-family: $light;
+                                                            font-family: $regular;
                                                             font-size: 14px;
                                                             line-height: 17px;
                                                             color: #414141;
@@ -130,7 +130,7 @@
                                                                 display: none !important;
                                                                 color: #C7C8CA;
                                                                 margin-left: 4px;
-                                                                font-family: "light";
+                                                                font-family: "regular";
                                                             }
                                                             &:hover{
                                                                 &:before{
@@ -143,7 +143,7 @@
                                                                 display: inline-block;
                                                                 color: #C7C8CA;
                                                                 margin-left: 4px;
-                                                                font-family: "light";
+                                                                font-family: "regular";
                                                              }
                                                         }
                                                     }
@@ -205,7 +205,7 @@
                                                 &.siyah {
                                                     a {
                                                         &:before {
-                                                            background: #000;
+                                                            background: $dark;
                                                         }
                                                     }  
                                                 }
@@ -335,7 +335,7 @@
                                                        &:before {
                                                         background: #fff;
                                                         border-color: #C7C8CA;
-                                                        color: #000;
+                                                        color: $dark;
                                                       } 
                                                     }
                                                 }
@@ -372,11 +372,11 @@
                                                         display: none;
                                                     }
                                                     &:hover {
-                                                        border:1px solid #000;
+                                                        border:1px solid $dark;
                                                     }
                                                     &.link_selected {
-                                                        background: #000;
-                                                        border-color: #000;
+                                                        background: $dark;
+                                                        border-color: $dark;
                                                         color: #fff;
                                                     }
                                                 }
@@ -430,7 +430,7 @@
                     background-color: #FFF;
                     border: 1px solid #414141;
                     font-size: 12px;
-                    font-family: $webl;
+                    font-family: $regular;
                     text-align: center;
                     line-height: 40px;
                     padding: 0 10px;

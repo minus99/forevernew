@@ -13,7 +13,7 @@
                         height: 100%;
                     }
                 }
-            }    
+            }  
         }    
     }    
 }
@@ -21,13 +21,15 @@
 .ems-page-default{
     &-member {
         &-header {
-            padding: 100px 10px 95px 50%;
+            /*padding: 100px 10px 95px 50%;*/
             text-align: center;
+            height: 550px;
             span {
+                display: none;
                 span {
                     font-size: 40px;
                     line-height: 45px;
-                    font-family: $playr;
+                    font-family: $medium;
                     margin-top: 30px;
                     display: block;
                 }
@@ -59,14 +61,17 @@
             width: 100%;
             margin-left: auto;
             margin-right: auto;
-            background:url(#{$baseHref + "/UPLOAD/BANNERS/covers/Hero-Login.jpg"}) top center no-repeat !important;
-            background-size: cover !important;
-            padding: 0;
+            /*background:url(#{$baseHref + "/UPLOAD/BANNERS/covers/Hero-Login.jpg"}) top center no-repeat !important;
+            background-size: cover !important; */
+            background: #fff;
+            padding: 0; 
             &-wrp {
                 display: flex;
                 flex-direction: row-reverse;
                 justify-content: space-between;
                 padding: 50px 30px 30px 30px;
+                position: relative;
+                z-index:9;
             }
         }
     }
@@ -134,7 +139,7 @@
                         > span{
                             display: block;
                             text-align: center;
-                            font-family: $webr;
+                            font-family: $regular;
                             font-size: 22px;
                             padding-bottom: 18px;
                         }
@@ -150,7 +155,7 @@
                             font-family: $medium;
                             margin-bottom: 30px;
                             u {
-                                font-family: $light;
+                                font-family: $regular;
                                 text-decoration: none;
                                 &:hover {
                                     opacity: .8;
@@ -252,7 +257,7 @@
                     .ems-form-obj{
                         text-align: center;
                         a{
-                            font-family: $light;
+                            font-family: $regular;
                             font-size: 14px;
                             color: $lDark;
                         }
@@ -283,8 +288,8 @@
                         cursor: pointer;
                         @include transition(all 0.2s ease);
                         &.checked{
-                            background: #000;
-                            border-color: #000;
+                            background: $dark;
+                            border-color: $dark;
                             &:after{
                                 font-family: 'icomoon';
                                 content:'\e908';
@@ -342,6 +347,17 @@
                 }
             }
         }
+        .video-block { 
+            position: absolute;
+            top: 0;
+            width: 100%;
+            .video-area {
+                border: 0;
+                margin: 0 auto;
+                max-width: none;
+                width: 100%; 
+            }
+        } 
     }
     .ems-signup{
         display: none;
@@ -385,7 +401,7 @@
     margin-bottom: 30px;
     &:before {}
     span {
-        color: #E7BBB4;
+        color: $sunflower;
         width: 100%;
         text-align: center;
         padding: 12px 0px 11px 0;
@@ -397,7 +413,7 @@
             bottom: 0;
             width: 100%;
             height: 0;
-            background: #E7BBB4;
+            background: $sunflower;
         }
     }
     p {
@@ -492,8 +508,8 @@
         }
         &-member{
             &-login {
-                background:url(#{$baseHref + "/UPLOAD/BANNERS/covers/Hero-Login-MB.jpg"}) top center no-repeat !important;
-                background-size: contain !important;
+                /*background:url(#{$baseHref + "/UPLOAD/BANNERS/covers/Hero-Login-MB.jpg"}) top center no-repeat !important;
+                background-size: contain !important;*/
                 .ems-col{
                     border-bottom: 1px solid #C7C8CA;
                     padding-bottom: 40px;
@@ -501,16 +517,18 @@
                 &-wrp {
                     flex-direction: column-reverse;
                     padding: 25px 20px;
+                    background: #fff;
                 }
             }
             &-header {
-                padding: 110% 20px 0px;
+                /*padding: 110% 20px 0px;*/
+                height: 250px;
                 span {
                     a {
                         width: 100%;
                         max-width: 270px;
-                        border-color: #000;
-                        color: #000;
+                        border-color: $dark;
+                        color: $dark;
                         margin: 0;
                     }
                 }

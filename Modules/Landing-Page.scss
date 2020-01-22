@@ -75,7 +75,7 @@
                         .landing-column-content {
                             a {
                                 &:before {
-                                    background: #000;
+                                    background: $dark;
                                 }
                             }
                         }
@@ -100,7 +100,7 @@
             span {
                 font-size: 40px;
                 line-height: 1em; 
-                font-family: $playr;
+                font-family: $medium;
                 display: block;
             }
             small {
@@ -117,16 +117,16 @@
                 line-height: 20px;
             }
             a {
-                border: 1px solid #000;
+                border: 1px solid $dark;
                 display: inline-block;
                 text-align: center;
                 line-height: 40px;
                 padding: 0 15px;
                 text-transform: uppercase;
-                font-family: $webr;
+                font-family: $regular;
                 font-size: 13px;
                 &:hover {
-                    background: #000;
+                    background: $dark;
                     color: #fff;
                 }
                 &:empty {
@@ -203,7 +203,7 @@
                     position: absolute;
                     top: 50%;
                     padding: 8px 10px;
-                    background: #333;
+                    background: $black;
                     border-radius: 3px;
                     -webkit-transform: translateY(-50%);
                     -ms-transform: translateY(-50%);
@@ -261,20 +261,20 @@
                 padding: 50px 30px;
                 text-align: center;
                 background: #fff;
-                span {font-size: 40px; font-family: $webl; line-height: 1em; display: block; margin-bottom: 5px;}
+                span {font-size: 40px; font-family: $regular; line-height: 1em; display: block; margin-bottom: 5px;}
                 small {font-size:17px; font-family: $medium; letter-spacing: 1px; line-height: 1em; text-transform: uppercase; display: block; margin: 0 0 20px 0;}
                 p {font-size: 13px; margin: 0 0 20px 0; line-height: 20px;}
                 a {
-                    border: 1px solid #000; 
+                    border: 1px solid $dark; 
                     display: inline-block; 
                     text-align: center; 
                     font-size: 13px;
                     font-family: $medium;
                     line-height: 40px; 
-                    padding: 0 15px; color: #000000;
+                    padding: 0 15px; color: $dark;
                     @include transition (background .6s ease);
                     &:hover {
-                        background: #000;
+                        background: $dark;
                         color: #fff;
                     }
                 }
@@ -308,7 +308,7 @@
                     }
                     small {
                         font-size: 40px;
-                        font-family: $playr;
+                        font-family: $medium;
                         text-transform: none;
                     }
                }
@@ -374,7 +374,7 @@
                             content: '';
                             height: 2px;
                             width: 100%;
-                            background: #000;
+                            background: $dark;
                             display: block;
                             bottom: 0;
                             left: 0;
@@ -382,7 +382,7 @@
                             @include transition (width .4s ease);
                         }
                         &:hover {
-                            color: rgba($color: #000000, $alpha: .6);
+                            color: rgba($color: $dark, $alpha: .6);
                             &:before {
                                 width: 0;
                             }
@@ -432,7 +432,7 @@
                         text-align: left;
                         padding: 60px 0px 60px 150px;
                         span {
-                            font-family: $webl;
+                            font-family: $regular;
                             text-transform: none;
                             font-family: "webl";
                         }
@@ -516,11 +516,11 @@
                             -webkit-transform: none;
                             -ms-transform: none;
                             transform: none;
-                            color: #000;
+                            color: $dark;
                             max-width: none;
                             a {
                                 &:hover {
-                                    color: #000;
+                                    color: $dark;
                                 }
                             } 
                             &.left {

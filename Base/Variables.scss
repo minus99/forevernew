@@ -1,30 +1,26 @@
 /*General Definations*/
-/*$baseHref: '';*/
-$baseHref: '//forevernew.proj-e.com/';
+$baseHref: ''; 
+/*$baseHref: 'http://www.markayok.com/'; */  
 
-$marginAuto: 0 auto 0 auto;
+$marginAuto: 0 auto 0 auto; 
 $singleOuter: 1.6rem;
 
-$siteContainerWidth: 1440px;
-$siteContainerWidthMiddle: 1200px;
+$siteContainerWidth: 1440px; 
+$siteContainerWidthMiddle: 1200px;  
 $siteContainerWidthShort: 1120px;
 $siteContainerWidthMobile: 960px;
-$siteContainerWidthFull: 100%;
+$siteContainerWidthFull: 100%;  
 
-/*site Rgba Background*/
+/*site Rgba Background*/ 
 $rgbBg: rgba(35,31,32,0.95);
 
 /*Site fonts*/
 $bold: "bold";
-$light: "light";
-$regular: "regular"; 
+$regular: "regular";  
 $medium: "medium";
-$playr: "playr";
-$webl: "webl";
-$webr: "webr";
 /* old */
 $sBold: "sBold";
-$pdRegular: "pdRegular";
+$pdRegular: "pdRegular"; 
 $pdBoldItalic: "pdBoldItalic";
 
 
@@ -36,10 +32,11 @@ $ltSpace:4px;
 
 /*New colors*/
 $fcolor:#231F20;
-$lGray:#F3F3F3;
+$lGray:#F3F3F3; 
 $lDark:#000; 
+$dark:#2D2926;
 $gray3:#cacaca;
-$dGray: #6E6D6E;
+$dGray: #797979;
 $eGray:#e6e7e9;
 $nDark: #222;
 $darkBlack:#111;
@@ -47,6 +44,10 @@ $red:#ff374a;
 $green:#1edeac;
 $gold: #ffb604;
 $ffYellowL:#ffb604;
+$coffee:#C09C83;
+$sunflower:#FF9E1B;
+$black:#000;
+$lightBlue:#A4C8E1;
 
 $fbBtnColor:#3656b7;
 $btnColor: #1a1a1a;

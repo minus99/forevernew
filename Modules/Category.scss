@@ -87,7 +87,7 @@
                 /*display: none;*/
                 color: #C7C8CA;
                 margin-left: 4px;
-                font-family: $light;
+                font-family: $regular;
             }
             b{
                 display: none;
@@ -97,7 +97,7 @@
                 padding: 0px 0px 0px 20px;
                 margin-bottom: 10px;
                 position: relative;
-                font-family: $light;
+                font-family: $regular;
                 font-size: 14px;
                 line-height: 17px;
                 color: #414141;
@@ -206,12 +206,12 @@ body.ems-cat-menu-opened {
                                 }
                             }
                             &:hover {
-                                color: #000000;
+                                color: $dark;
                             }
                         }
                         &.act{
                             a{ 
-                                color: #000000;
+                                color: $dark;
                             }
                         }
                         &:last-child {

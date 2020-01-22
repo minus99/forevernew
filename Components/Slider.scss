@@ -21,8 +21,8 @@
                     h1, h2{
                         font-family:$regular;
                     }   
-                    h1{ color:#000; }
-                    h2{ color:#000; }
+                    h1{ color:$dark; }
+                    h2{ color:$dGray; }
                     .swiper-slide-button{
                         span{
                             display: inline-block;
@@ -62,7 +62,7 @@
                     padding-top: 15px;
                     line-height: 1.25;
                     font-size: 16px;
-                    color: #333;
+                    color: $black;
                     padding-bottom: 5px;
                     position: relative;
                     font-family: "medium";
@@ -89,11 +89,11 @@
             }
             &:hover {
                 i:before {
-                    color: #000;
+                    color: $dark;
                 }    
             }
         }
-        &.trend {
+        &.mobileGrid {
             padding: 45px 20px;
             .swiper-slide {
                 > a {
@@ -168,7 +168,7 @@
         }
         .swiper-button-prev,
         .swiper-button-next{
-            height: calc(100% - 130px);
+            height: calc(100% - 60px);
             background: rgba(255, 255, 255, 0.5);
             bottom: 0;
             top: auto;
@@ -180,7 +180,7 @@
                 position: absolute;
                 &:before {
                     font-size: 20px;
-                    color: #000;
+                    color: $dark;
                 }
             }
         } 
@@ -197,6 +197,10 @@
             }
         }
     }
+}
+
+.coffee {
+    background-color: $coffee;
 }
 
 .ems-container-full.order-gray {
@@ -370,6 +374,21 @@
             }
         }
     }
+    &.right-layout{
+        .content-wrapper{
+            left: 40px;
+            right: inherit;
+            text-align: left;
+            > div{
+                .btn-price {
+                    &-span, &-btn{
+                        left: 0 ;
+                        right: inherit;
+                    }
+                }
+            }
+        }
+    }
 }
 
 .swiper-container-autoheight,
@@ -510,10 +529,10 @@
     background: #ddd;
     @include transition(all .5s ease);
     &.swiper-pagination-bullet-active {
-        background: #000;
+        background: $dark;
     }
     &:hover {
-        background: #000;
+        background: $dark;
     }
 }
 
@@ -624,7 +643,7 @@ button.swiper-pagination-bullet {
 }
 
 .swiper-pagination-progress.swiper-pagination-black .swiper-pagination-progressbar {
-    background: #000;
+    background: $dark;
 }
 
 .swiper-container-3d {
@@ -770,7 +789,7 @@ button.swiper-pagination-bullet {
     bottom: 0px;
     width: 100%;
     height: 100%;
-    background: #000;
+    background: $dark;
     opacity: 0.6;
     -webkit-filter: blur(50px);
     filter: blur(50px);
@@ -947,7 +966,7 @@ button.swiper-pagination-bullet {
             }
             .swiper-slide {
                 img{ /*opacity: 0; visibility: hidden;*/ width: 100%; max-height: 650px; margin-bottom: 20px; } 
-                .swiper-content{
+                .swiper-content{ 
                     position: absolute;
                     top: 50%;
                     left: 0;   
@@ -955,23 +974,24 @@ button.swiper-pagination-bullet {
                     /*min-width: 40%;*/
                     max-width: 350px;
                     width: 40%;
-                    height: 50%;
-                    display: table;
+                    //@includeheight: 50%;
+                    display: inline-block;
                     @include transition(all 666ms cubic-bezier(0.420, 0.000, 0.580, 1.000));
                     @include setTransform(translateY(-40%));
                     opacity: 0;
                     &-inner{
-                        display: table-cell;
+                        display: inline-block;
                         vertical-align: middle;
                         h1{
-                            font-size: 60px;
-                            line-height: 50px;
-                            font-family: $webr;
-                            margin-bottom: 30px;
+                            font-size: 35px;
+                           // line-height: 50px;
+                            font-family: $bold;
+                            margin-bottom: 15px;
                         }
                         h2{
-                            font-size: 16px; 
-                            font-family: $bold;  
+                            font-size: 18px; 
+                            font-family: $medium;
+                            line-height: 24px;  
                         } 
                         > span{
                             font-size: 25px; 
@@ -983,10 +1003,11 @@ button.swiper-pagination-bullet {
                             span{
                                 margin-top: 30px;
                                 font-size: 16px;
-                                padding: 10px 0;
+                                padding: 10px 15px;
                                 position: relative;
                                 font-family: $medium; 
-                                @include transition (opacity .2s ease);
+                                @include transition (all .2s ease);
+                                border: 1px solid $dark;
                                 &:after{
                                     content:'\e902';
                                     font-family: 'icomoon';
@@ -995,7 +1016,11 @@ button.swiper-pagination-bullet {
                                     font-size: 12px;
                                 }
                                 &:hover{
-                                    opacity: .6;
+                                    background: $dark;
+                                    color: #fff;
+                                    &:after {
+                                        color: #fff; 
+                                    }
                                 }
                             }
                         }
@@ -1006,6 +1031,9 @@ button.swiper-pagination-bullet {
                     .swiper-content{
                         left: 5%;
                         padding-left: 20px;
+                        &-inner {
+                            text-align: center;
+                        }
                     }
                 }
                 &.right-layout{
@@ -1014,6 +1042,20 @@ button.swiper-pagination-bullet {
                         left: inherit;
                         right: 5%;
                         padding-right: 20px;
+                        &-inner {
+                            text-align: right;
+                        }
+                    }
+                }
+                &.left-layout{
+                    background-position: top left !important;
+                    .swiper-content{
+                        right: inherit;
+                        left: 5%;
+                        padding-left: 20px;
+                        &-inner {
+                            text-align: left;
+                        }
                     }
                 }
                 &.active-slide{
@@ -1038,8 +1080,8 @@ button.swiper-pagination-bullet {
                     letter-spacing: 4.6px;
                 }
                 span{
-                    font-family: $playr;
-                    font-size: 28px;
+                    font-family: $bold;
+                    font-size: 24px;
                     text-align: center;
                 }
             }
@@ -1109,21 +1151,22 @@ button.swiper-pagination-bullet {
                             bottom: -5px;
                         }
                         h1 {
-                            font-size: 60px;
-                            line-height: 50px;
-                            font-family: $webr;
-                            margin-bottom: 30px;
+                            font-size: 30px;
+                            line-height: 40px;
+                            font-family: $regular;
+                            margin-bottom: 10px;
                         } 
                         h2 {
                             font-size: 16px;
-                            font-family: "bold";
+                            font-family: $regular;
                         }                       
                     }
                     .swiper-slide-button{
                         span{
-                            padding: 10px 0;
+                            padding: 10px;
+                            border: 1px solid $dark;
                             font-family: $medium;
-                            margin-top: 30px;
+                            margin-top: 20px;
                             &:after {
                                 content: '\e902';
                                 font-family: 'icomoon';
@@ -1170,7 +1213,7 @@ button.swiper-pagination-bullet {
         }
         &-categories{
             .swiper-title{
-                margin-top: 40px;
+                margin-top: 0px;
                 span{ padding-bottom: 20px; }
             }
             .swiper-slide {
@@ -1180,12 +1223,12 @@ button.swiper-pagination-bullet {
             .swiper-button-prev, .swiper-button-next {
                 i {
                     &:before {
-                        color: #000;
-                        font-size: 12px;
+                        color: $dark;
+                        font-size: 12px; 
                     }
                 }
             }
-            &.trend {
+            &.mobileGrid { 
                 padding: 20px 0;
                 .swiper-wrapper {
                     display: grid;
@@ -1240,7 +1283,7 @@ button.swiper-pagination-bullet {
                 bottom: 30px;
                 display: none;
             }
-        }
+        }    
         /*&-payment{
             .swiper-slide{
                 width: 200px;

@@ -1,4 +1,15 @@
-.widget, .ems-tab-widget{
+// System Widget //
+
+.system-widget {
+    padding: 0 100px;
+    .swiper-button-prev,
+    .swiper-button-next {
+        transform: translateY(calc(-50% - 50px));
+    }
+}
+
+// Tab Widget //
+.widget, .ems-tab-widget{ 
     display: none;
     padding: 50px 35px;
     border-top: 1px solid #e6e6e7;
@@ -19,9 +30,9 @@
             font-size: 14.5px;
             text-align: left;
             font-family: $medium;
-            color: #000;
+            color: $dark;
             padding-bottom: 12px;
-            border-bottom: 1px solid #000;
+            border-bottom: 1px solid $dark;
         }
     }
     .swiper-button-prev,
@@ -47,8 +58,8 @@
             &.selected {
                 a {
                     span {
-                        color: #000;
-                        border-bottom: 1px solid #000; 
+                        color: $dark;
+                        border-bottom: 1px solid $dark; 
                     }
                 }
             }
@@ -142,10 +153,10 @@
 }
 
 @media screen and (max-width: $breakpointXSM){
-    .widget{
+    .widget, .ems-tab-widget {
         overflow: hidden;
         padding: 30px 20px; 
-        .swiper-title{
+        .swiper-title, .ems-tab-header{
             text-align: center;
             padding: 0 10px 30px 10px;
             span{

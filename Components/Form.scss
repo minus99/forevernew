@@ -35,7 +35,7 @@ span.checkbox{
             cursor: pointer;
             @include transition(all .2s ease);
             &.checked {
-                background: #000;
+                background: $dark;
                 border-color: #171d2f;
                 &:after {
                     font-family: 'icomoon';
@@ -366,14 +366,14 @@ span.checkbox{
         [id$="plhLoginSifreUnut1"] {
             text-align: right;
             a{
-                color: #333;
+                color: $black;
                 font-style: italic;
             }
         }
         [id$="plhBeniHatirla1"] { 
             text-align: left;
             span{
-                color: #333;
+                color: $black;
                 font-style: italic;
             }
             .cStyler {
